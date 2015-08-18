@@ -1,0 +1,61 @@
+[
+  {
+    "model": "workflows.abstractwidget", 
+    "fields": {
+      "category": "f4d466b2-29b8-4966-8f33-aff8bf0e522e", 
+      "treeview_image": "", 
+      "uid": "de13912c-1b3d-4df4-aa83-d1522dd838dc", 
+      "windows_queue": false, 
+
+      "interaction_view": "", 
+      "has_progress_bar": false, 
+      "image": "", 
+      "description": "", 
+      "static_image": "construction_work .png", 
+      "action": "weka_local_pre_display_summation", 
+      "visualization_view": "weka_local_display_summation", 
+      "streaming_visualization_view": "", 
+      "post_interact_action": "", 
+      "wsdl_method": "", 
+      "wsdl": "", 
+      "interactive": false, 
+      "is_streaming": false, 
+      "order": 4, 
+      "name": "Display Summation"
+    }
+  }, 
+  {
+    "model": "workflows.abstractinput", 
+    "fields": {
+      "widget": "de13912c-1b3d-4df4-aa83-d1522dd838dc", 
+      "name": "Integer List", 
+      "short_name": "lst", 
+      "default": "", 
+      "description": "List of integers", 
+      "required": false, 
+      "multi": false, 
+      "parameter_type": null, 
+      "variable": "intList", 
+      "parameter": false, 
+      "order": 1, 
+      "uid": "8c1eb9ac-5205-4a01-98d1-00e3078f41a0"
+    }
+  }, 
+  {
+    "model": "workflows.abstractinput", 
+    "fields": {
+      "widget": "de13912c-1b3d-4df4-aa83-d1522dd838dc", 
+      "name": "Sum", 
+      "short_name": "int", 
+      "default": "", 
+      "description": "Sum (possibly correct) of integer list", 
+      "required": false, 
+      "multi": false, 
+      "parameter_type": null, 
+      "variable": "sum", 
+      "parameter": false, 
+      "order": 2, 
+      "uid": "d65e335b-dfd0-40a2-aef9-82c2ebba546f"
+    }
+  }
+]

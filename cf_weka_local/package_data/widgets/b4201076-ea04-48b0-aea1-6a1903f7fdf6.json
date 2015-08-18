@@ -1,0 +1,56 @@
+[
+  {
+    "model": "workflows.abstractwidget", 
+    "fields": {
+      "category": "00d411b2-29b8-4966-8f33-aff8bf0e5244",
+      "treeview_image": "", 
+      "uid": "b4201076-ea04-48b0-aea1-6a1903f7fdf6", 
+      "windows_queue": false, 
+
+      "interaction_view": "", 
+      "has_progress_bar": false, 
+      "image": "", 
+      "description": "Correlation-based Feature Subset Selection",
+      "static_image": "", 
+      "action": "weka_local_AttributeSelection",
+      "visualization_view": "", 
+      "streaming_visualization_view": "", 
+      "post_interact_action": "", 
+      "wsdl_method": "", 
+      "wsdl": "", 
+      "interactive": false, 
+      "is_streaming": false, 
+      "order": 1, 
+      "name": "Attribute Selection"
+    }
+  }, 
+  {
+    "model": "workflows.abstractinput", 
+    "fields": {
+      "widget": "b4201076-ea04-48b0-aea1-6a1903f7fdf6", 
+      "name": "instances", 
+      "short_name": "ins", 
+      "default": "", 
+      "description": "input file", 
+      "required": false, 
+      "multi": false, 
+      "parameter_type": null, 
+      "variable": "instances", 
+      "parameter": false, 
+      "order": 1, 
+      "uid": "49b22ca4-7d16-4a07-9cf4-80b216cd7a19"
+    }
+  }, 
+  {
+    "model": "workflows.abstractoutput", 
+    "fields": {
+      "widget": "b4201076-ea04-48b0-aea1-6a1903f7fdf6", 
+      "name": "selected", 
+      "short_name": "sel", 
+      "description": "selected instances", 
+      "variable": "selected", 
+      "order": 1, 
+      "uid": "ca45e6ce-6c58-436e-8a4f-173ddad1a22d"
+    }
+  }
+]

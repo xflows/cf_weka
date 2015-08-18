@@ -1,0 +1,73 @@
+[
+  {
+    "model": "workflows.abstractwidget", 
+    "fields": {
+      "category": "f4d466b2-29b8-4966-8f33-aff8bf0e522e", 
+      "treeview_image": "", 
+      "uid": "e9a498ca-076f-44c6-929a-164f47568a2c", 
+      "windows_queue": false, 
+
+      "interaction_view": "", 
+      "has_progress_bar": false, 
+      "image": "", 
+      "description": "", 
+      "static_image": "construction_work .png", 
+      "action": "weka_local_create_integers", 
+      "visualization_view": "", 
+      "streaming_visualization_view": "", 
+      "post_interact_action": "", 
+      "wsdl_method": "", 
+      "wsdl": "", 
+      "interactive": false, 
+      "is_streaming": false, 
+      "order": 1, 
+      "name": "Create Integer List"
+    }
+  }, 
+  {
+    "model": "workflows.abstractinput", 
+    "fields": {
+      "widget": "e9a498ca-076f-44c6-929a-164f47568a2c", 
+      "name": "Integer List String", 
+      "short_name": "str", 
+      "default": "3\r\n2\r\n1\r\n4", 
+      "description": "Comma or new-line separated list of integers", 
+      "required": false, 
+      "multi": false, 
+      "parameter_type": "textarea", 
+      "variable": "intStr", 
+      "parameter": true, 
+      "order": 1, 
+      "uid": "8c41e026-58b7-4680-b0b8-62da94529b5b"
+    }
+  }, 
+  {
+    "model": "workflows.abstractinput", 
+    "fields": {
+      "widget": "e9a498ca-076f-44c6-929a-164f47568a2c", 
+      "name": "Sort list", 
+      "short_name": "bol", 
+      "default": "true", 
+      "description": "Should the list be sorted", 
+      "required": true, 
+      "multi": false, 
+      "parameter_type": "checkbox", 
+      "variable": "sort", 
+      "parameter": true, 
+      "order": 2, 
+      "uid": "b185e41d-5241-4d12-91c1-4121a641e1da"
+    }
+  }, 
+  {
+    "model": "workflows.abstractoutput", 
+    "fields": {
+      "widget": "e9a498ca-076f-44c6-929a-164f47568a2c", 
+      "name": "Integer List", 
+      "short_name": "lst", 
+      "description": "List of integers", 
+      "variable": "intList", 
+      "order": 1, 
+      "uid": "7d1c77fe-2fe9-4910-b5b7-967ead4de4bf"
+    }
+  }
+]

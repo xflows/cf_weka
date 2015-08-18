@@ -1,0 +1,73 @@
+[
+  {
+    "model": "workflows.abstractwidget",
+    "fields": {
+      "category": "f4d466b2-29b8-4966-8f33-aff8bf0e522e",
+      "treeview_image": "",
+      "uid": "1406a00c-0b1c-48c3-a96e-971c08269d80",
+      "windows_queue": false,
+
+      "interaction_view": "",
+      "has_progress_bar": false,
+      "image": "",
+      "description": "",
+      "static_image": "",
+      "action": "weka_local_Apply_Classifier",
+      "visualization_view": "",
+      "streaming_visualization_view": "",
+      "post_interact_action": "",
+      "wsdl_method": "",
+      "wsdl": "",
+      "interactive": false,
+      "is_streaming": false,
+      "order": 1,
+      "name": "Apply Weka Classifier"
+    }
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "widget": "1406a00c-0b1c-48c3-a96e-971c08269d80",
+      "name": "Instances",
+      "short_name": "ins",
+      "default": "",
+      "description": "to test the a classifier",
+      "required": false,
+      "multi": false,
+      "parameter_type": null,
+      "variable": "instances",
+      "parameter": false,
+      "order": 2,
+      "uid": "6a94c8a9-2d1b-438b-237a-166fb00f75df"
+    }
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "widget": "1406a00c-0b1c-48c3-a96e-971c08269d80",
+      "name": "Classifier",
+      "short_name": "lea",
+      "default": "",
+      "description": "classifier to be applied",
+      "required": false,
+      "multi": false,
+      "parameter_type": null,
+      "variable": "classifier",
+      "parameter": false,
+      "order": 1,
+      "uid": "c25370e0-89be-4459-9104-4a96123e4c88"
+    }
+  },
+  {
+    "model": "workflows.abstractoutput",
+    "fields": {
+      "widget": "1406a00c-0b1c-48c3-a96e-971c08269d80",
+      "name": "instances_out",
+      "short_name": "ins",
+      "description": "",
+      "variable": "instances_out",
+      "order": 1,
+      "uid": "6033bbd5-654e-4581-8b71-d2fb48a04523"
+    }
+  }
+]

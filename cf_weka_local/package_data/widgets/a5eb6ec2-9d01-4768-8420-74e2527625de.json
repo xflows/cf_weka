@@ -1,0 +1,102 @@
+[
+  {
+    "model": "workflows.abstractwidget", 
+    "fields": {
+      "category": "f4d466b2-29b8-4966-8f33-aff8bf0e522e", 
+      "treeview_image": "", 
+      "uid": "a5eb6ec2-9d01-4768-8420-74e2527625de", 
+      "windows_queue": false, 
+
+      "interaction_view": "", 
+      "has_progress_bar": false, 
+      "image": "", 
+      "description": "", 
+      "static_image": "", 
+      "action": "weka_local_ApplyMappedClassifierGetInstances",
+      "visualization_view": "", 
+      "streaming_visualization_view": "", 
+      "post_interact_action": "", 
+      "wsdl_method": "", 
+      "wsdl": "", 
+      "interactive": false, 
+      "is_streaming": false, 
+      "order": 1, 
+      "name": "Apply Mapped Weka Classifier Get Instances"
+    }
+  }, 
+  {
+    "model": "workflows.abstractinput", 
+    "fields": {
+      "widget": "a5eb6ec2-9d01-4768-8420-74e2527625de", 
+      "name": "original_training_instances", 
+      "short_name": "ori", 
+      "default": "", 
+      "description": "", 
+      "required": false, 
+      "multi": false, 
+      "parameter_type": null, 
+      "variable": "original_training_instances", 
+      "parameter": false, 
+      "order": 2, 
+      "uid": "7d4ab2df-9697-4239-a654-d345e9597e58"
+    }
+  }, 
+  {
+    "model": "workflows.abstractinput", 
+    "fields": {
+      "widget": "a5eb6ec2-9d01-4768-8420-74e2527625de", 
+      "name": "instances", 
+      "short_name": "ins", 
+      "default": "", 
+      "description": "", 
+      "required": false, 
+      "multi": false, 
+      "parameter_type": null, 
+      "variable": "instances", 
+      "parameter": false, 
+      "order": 3, 
+      "uid": "b93b3a8a-a35d-4d27-a08e-8fd6768d8fed"
+    }
+  }, 
+  {
+    "model": "workflows.abstractinput", 
+    "fields": {
+      "widget": "a5eb6ec2-9d01-4768-8420-74e2527625de", 
+      "name": "classifier", 
+      "short_name": "cla", 
+      "default": "", 
+      "description": "", 
+      "required": false, 
+      "multi": false, 
+      "parameter_type": null, 
+      "variable": "classifier", 
+      "parameter": false, 
+      "order": 1, 
+      "uid": "c021c335-2161-4288-8482-d3c6f097a858"
+    }
+  }, 
+  {
+    "model": "workflows.abstractoutput", 
+    "fields": {
+      "widget": "a5eb6ec2-9d01-4768-8420-74e2527625de", 
+      "name": "instances", 
+      "short_name": "ins", 
+      "description": "", 
+      "variable": "instances", 
+      "order": 1, 
+      "uid": "924900db-fc8c-42e1-94a2-412a6e0f01b4"
+    }
+  }, 
+  {
+    "model": "workflows.abstractoutput", 
+    "fields": {
+      "widget": "a5eb6ec2-9d01-4768-8420-74e2527625de", 
+      "name": "mapping_report", 
+      "short_name": "map", 
+      "description": "", 
+      "variable": "mapping_report", 
+      "order": 2, 
+      "uid": "f0fdbff3-4a46-44b3-a7b9-5657066c9a43"
+    }
+  }
+]

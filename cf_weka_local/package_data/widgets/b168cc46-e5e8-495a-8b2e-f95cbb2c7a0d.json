@@ -1,0 +1,39 @@
+[
+  {
+    "model": "workflows.abstractwidget", 
+    "fields": {
+      "category": "f4d466b2-29b8-4966-8f33-aff8bf0e522e", 
+      "treeview_image": "", 
+      "uid": "b168cc46-e5e8-495a-8b2e-f95cbb2c7a0d", 
+      "windows_queue": false, 
+
+      "interaction_view": "", 
+      "has_progress_bar": false, 
+      "image": "", 
+      "description": "", 
+      "static_image": "", 
+      "action": "weka_local_ZeroR",
+      "visualization_view": "", 
+      "streaming_visualization_view": "", 
+      "post_interact_action": "", 
+      "wsdl_method": "", 
+      "wsdl": "", 
+      "interactive": false, 
+      "is_streaming": false, 
+      "order": 1, 
+      "name": "Rule Learning ZeroR"
+    }
+  }, 
+  {
+    "model": "workflows.abstractoutput", 
+    "fields": {
+      "widget": "b168cc46-e5e8-495a-8b2e-f95cbb2c7a0d", 
+      "name": "learner", 
+      "short_name": "lrn", 
+      "description": "", 
+      "variable": "learner", 
+      "order": 1, 
+      "uid": "07a35138-1808-4228-8175-36f380f290fe"
+    }
+  }
+]

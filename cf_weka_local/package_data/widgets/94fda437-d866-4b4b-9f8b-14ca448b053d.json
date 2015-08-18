@@ -1,0 +1,56 @@
+[
+  {
+    "model": "workflows.abstractwidget", 
+    "fields": {
+      "category": "00d411b2-29b8-4966-8f33-aff8bf0e5244",
+      "treeview_image": "", 
+      "uid": "94fda437-d866-4b4b-9f8b-14ca448b053d", 
+      "windows_queue": false, 
+
+      "interaction_view": "", 
+      "has_progress_bar": false, 
+      "image": "", 
+      "description": "", 
+      "static_image": "", 
+      "action": "weka_local_Normalize",
+      "visualization_view": "", 
+      "streaming_visualization_view": "", 
+      "post_interact_action": "", 
+      "wsdl_method": "", 
+      "wsdl": "", 
+      "interactive": false, 
+      "is_streaming": false, 
+      "order": 1, 
+      "name": "Normalize"
+    }
+  }, 
+  {
+    "model": "workflows.abstractinput", 
+    "fields": {
+      "widget": "94fda437-d866-4b4b-9f8b-14ca448b053d", 
+      "name": "instances", 
+      "short_name": "ins", 
+      "default": "", 
+      "description": "", 
+      "required": false, 
+      "multi": false, 
+      "parameter_type": null, 
+      "variable": "instances", 
+      "parameter": false, 
+      "order": 1, 
+      "uid": "e8851667-aec8-4361-afe1-bfeef546b12b"
+    }
+  }, 
+  {
+    "model": "workflows.abstractoutput", 
+    "fields": {
+      "widget": "94fda437-d866-4b4b-9f8b-14ca448b053d", 
+      "name": "normalized", 
+      "short_name": "nor", 
+      "description": "", 
+      "variable": "normalized", 
+      "order": 1, 
+      "uid": "2a06ab84-df33-4e7a-adc4-c0ab97af44f0"
+    }
+  }
+]

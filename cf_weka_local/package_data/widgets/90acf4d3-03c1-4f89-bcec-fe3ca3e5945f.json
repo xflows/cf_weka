@@ -1,0 +1,39 @@
+[
+  {
+    "model": "workflows.abstractwidget", 
+    "fields": {
+      "category": "f4d466b2-29b8-4966-8f33-aff8bf0e522e", 
+      "treeview_image": "", 
+      "uid": "90acf4d3-03c1-4f89-bcec-fe3ca3e5945f", 
+      "windows_queue": false, 
+
+      "interaction_view": "", 
+      "has_progress_bar": false, 
+      "image": "", 
+      "description": "Decision Tree (J48)",
+      "static_image": "", 
+      "action": "weka_local_J48",
+      "visualization_view": "", 
+      "streaming_visualization_view": "", 
+      "post_interact_action": "", 
+      "wsdl_method": "", 
+      "wsdl": "", 
+      "interactive": false, 
+      "is_streaming": false, 
+      "order": 1, 
+      "name": "Decision Tree"
+    }
+  }, 
+  {
+    "model": "workflows.abstractoutput", 
+    "fields": {
+      "widget": "90acf4d3-03c1-4f89-bcec-fe3ca3e5945f", 
+      "name": "Learner", 
+      "short_name": "lrn", 
+      "description": "", 
+      "variable": "learner", 
+      "order": 1, 
+      "uid": "7e9cea03-f6a8-4d44-acbb-b21ff32eef6c"
+    }
+  }
+]

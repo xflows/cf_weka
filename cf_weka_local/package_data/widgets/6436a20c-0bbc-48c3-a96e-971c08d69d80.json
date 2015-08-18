@@ -1,0 +1,73 @@
+[
+  {
+    "model": "workflows.abstractwidget", 
+    "fields": {
+      "category": "f4d466b2-29b8-4966-8f33-aff8bf0e522e", 
+      "treeview_image": "", 
+      "uid": "6436a20c-0bbc-48c3-a96e-971c08d69d80", 
+      "windows_queue": false, 
+
+      "interaction_view": "", 
+      "has_progress_bar": false, 
+      "image": "", 
+      "description": "", 
+      "static_image": "", 
+      "action": "weka_local_Build_Classifier",
+      "visualization_view": "", 
+      "streaming_visualization_view": "", 
+      "post_interact_action": "", 
+      "wsdl_method": "", 
+      "wsdl": "", 
+      "interactive": false, 
+      "is_streaming": false, 
+      "order": 1, 
+      "name": "Build Weka Classifier"
+    }
+  }, 
+  {
+    "model": "workflows.abstractinput", 
+    "fields": {
+      "widget": "6436a20c-0bbc-48c3-a96e-971c08d69d80", 
+      "name": "Instances", 
+      "short_name": "ins", 
+      "default": "", 
+      "description": "to create the a classifier", 
+      "required": false, 
+      "multi": false, 
+      "parameter_type": null, 
+      "variable": "instances", 
+      "parameter": false, 
+      "order": 2, 
+      "uid": "6a94c8a9-2d1b-438b-9a7a-166fb00f75df"
+    }
+  }, 
+  {
+    "model": "workflows.abstractinput", 
+    "fields": {
+      "widget": "6436a20c-0bbc-48c3-a96e-971c08d69d80", 
+      "name": "Learner", 
+      "short_name": "lea", 
+      "default": "", 
+      "description": "used to build classifier", 
+      "required": false, 
+      "multi": false, 
+      "parameter_type": null, 
+      "variable": "learner", 
+      "parameter": false, 
+      "order": 1, 
+      "uid": "c25370e0-89be-4459-9104-4a96156e4c88"
+    }
+  }, 
+  {
+    "model": "workflows.abstractoutput", 
+    "fields": {
+      "widget": "6436a20c-0bbc-48c3-a96e-971c08d69d80", 
+      "name": "Classifier", 
+      "short_name": "cla", 
+      "description": "", 
+      "variable": "classifier", 
+      "order": 1, 
+      "uid": "6033bbd5-654e-4581-8b71-d2fb48a045c7"
+    }
+  }
+]
