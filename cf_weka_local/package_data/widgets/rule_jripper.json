@@ -1,0 +1,39 @@
+[
+  {
+    "model": "workflows.abstractwidget", 
+    "fields": {
+      "category": "1c5ac714-84ca-4c93-befb-ce0c16148iii",
+      "treeview_image": "", 
+      "uid": "123aaa46-e5e8-495a-8b2e-f95cbb2c7a0d",
+      "windows_queue": false, 
+
+      "interaction_view": "", 
+      "has_progress_bar": false, 
+      "image": "", 
+      "description": "", 
+      "static_image": "", 
+      "action": "weka_local_JRipper",
+      "visualization_view": "", 
+      "streaming_visualization_view": "", 
+      "post_interact_action": "", 
+      "wsdl_method": "", 
+      "wsdl": "", 
+      "interactive": false, 
+      "is_streaming": false, 
+      "order": 1, 
+      "name": "Rule Learner JRipper"
+    }
+  }, 
+  {
+    "model": "workflows.abstractoutput", 
+    "fields": {
+      "widget": "123aaa46-e5e8-495a-8b2e-f95cbb2c7a0d",
+      "name": "learner", 
+      "short_name": "lrn", 
+      "description": "", 
+      "variable": "learner", 
+      "order": 1, 
+      "uid": "07a35138-1808-4228-8175-36f380f290fe"
+    }
+  }
+]
