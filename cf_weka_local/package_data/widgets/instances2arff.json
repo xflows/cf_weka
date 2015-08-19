@@ -21,15 +21,15 @@
       "interactive": false, 
       "is_streaming": false, 
       "order": 1, 
-      "name": "Weka Instances To Arff"
+      "name": "Export Dataset to an ARFF Textual Format"
     }
   }, 
   {
     "model": "workflows.abstractinput", 
     "fields": {
       "widget": "924b57f0-9ba2-4d87-90b8-c837da67f5c2", 
-      "name": "Instances", 
-      "short_name": "ins", 
+      "name": "dataset",
+      "short_name": "dat",
       "default": "", 
       "description": "", 
       "required": false, 
@@ -45,7 +45,7 @@
     "model": "workflows.abstractoutput", 
     "fields": {
       "widget": "924b57f0-9ba2-4d87-90b8-c837da67f5c2", 
-      "name": "arff file", 
+      "name": "ARFF textual format",
       "short_name": "arf", 
       "description": "", 
       "variable": "arff", 

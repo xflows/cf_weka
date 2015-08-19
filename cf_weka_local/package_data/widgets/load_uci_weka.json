@@ -1,0 +1,240 @@
+[
+  {
+    "model": "workflows.abstractwidget",
+    "fields": {
+      "category": "1f06ed94-c57a-4bb0-8f05-1212920c95a0",
+      "treeview_image": "treeview/UCI-2-ODT.png",
+      "uid": "4e8683ae-c571-413c-a592-2093de96ea3b",
+      "is_streaming": false,
+      "interaction_view": "",
+      "has_progress_bar": false,
+      "image": "images/UCI-2-ODT.png",
+      "description": "",
+      "static_image": "UCI-2-ODT.png",
+      "action": "weka_local_LoadUCI",
+      "visualization_view": "",
+      "streaming_visualization_view": "",
+      "post_interact_action": "",
+      "wsdl_method": "",
+      "wsdl": "",
+      "interactive": false,
+      "windows_queue": false,
+      "order": 1,
+      "name": "Load a UCI Dataset (WEKA)"
+    }
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "widget": "4e8683ae-c571-413c-a592-2093de96ea3b",
+      "name": "Dataset",
+      "short_name": "ds",
+      "default": "cpu.arff",
+      "description": "",
+      "required": false,
+      "multi": false,
+      "parameter_type": "select",
+      "variable": "filename",
+      "parameter": true,
+      "order": 1,
+      "uid": "268452b1-6016-404d-bdb8-01f03df4140f"
+    }
+  },
+  {
+    "model": "workflows.abstractoutput",
+    "fields": {
+      "widget": "4e8683ae-c571-413c-a592-2093de96ea3b",
+      "name": "Dataset",
+      "short_name": "dat",
+      "description": "",
+      "variable": "data",
+      "order": 1,
+      "uid": "2150098d-bcd0-480a-afac-78a833e76eb5"
+    }
+  },
+
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "breast-cancer.arff",
+      "uid": "920c9cf9-86bd-410e-8ab6-de4fb06bdacd",
+      "value": "breast-cancer.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "contact-lenses.arff",
+      "uid": "81ea5d3c-15ee-45f1-a4b6-5121306d7987",
+      "value": "contact-lenses.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "cpu.arff",
+      "uid": "e986aa32-30c0-4c6b-96fb-f88f438b095d",
+      "value": "cpu.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "cpu.with.vendor.arff",
+      "uid": "9ae82a6a-3868-4c0e-ac3c-2b792f7eab90",
+      "value": "cpu.with.vendor.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "credit-g.arff",
+      "uid": "2f7b8df9-c5d9-4b7f-8212-8ef41a15002e",
+      "value": "credit-g.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "diabetes.arff",
+      "uid": "960a6b24-44f3-4473-9d37-897c11204ea8",
+      "value": "diabetes.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "glass.arff",
+      "uid": "5040befb-84c0-40c2-b5ce-0863305e9e79",
+      "value": "glass.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "ionosphere.arff",
+      "uid": "73091116-3e60-47be-9924-47644fc18eb1",
+      "value": "ionosphere.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "iris.2D.arff",
+      "uid": "389551f3-4fd6-40b3-8cd9-661ec41c264a",
+      "value": "iris.2D.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "iris.arff",
+      "uid": "0d6d0d35-0c6e-43aa-bcd9-d96c9dc27741",
+      "value": "iris.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "labor.arff",
+      "uid": "35664bda-ec4c-49c8-b30d-6b931fbd0f74",
+      "value": "labor.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "ReutersCorn-test.arff",
+      "uid": "844b81fd-81c5-47e3-890b-ddd503c1876e",
+      "value": "ReutersCorn-test.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "ReutersCorn-train.arff",
+      "uid": "700a8854-83ba-496d-ac1d-40693d5b7160",
+      "value": "ReutersCorn-train.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "ReutersGrain-test.arff",
+      "uid": "e9b04797-9ffc-4925-a73e-78cd006055d9",
+      "value": "ReutersGrain-test.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "ReutersGrain-train.arff",
+      "uid": "25fd1984-530e-4521-80c3-ce7b628c7b7e",
+      "value": "ReutersGrain-train.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "segment-challenge.arff",
+      "uid": "eb393a87-bdea-4553-abfa-b25be90bafb3",
+      "value": "segment-challenge.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "segment-test.arff",
+      "uid": "c8e862cf-2966-42be-b1ad-7d62086c7f9b",
+      "value": "segment-test.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "soybean.arff",
+      "uid": "ac485103-e922-4bc0-be93-ce935a8809cd",
+      "value": "soybean.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "supermarket.arff",
+      "uid": "34512dbe-2e78-4a42-8aaa-1144b6648b91",
+      "value": "supermarket.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "unbalanced.arff",
+      "uid": "6ee78c61-e570-4370-b954-830cd75d3f7c",
+      "value": "unbalanced.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "vote.arff",
+      "uid": "a3d2739d-bb83-4d21-97e5-bf955ce961fd",
+      "value": "vote.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "weather.nominal.arff",
+      "uid": "21fcfbdc-e257-4682-a8b3-ffc187f281f4",
+      "value": "weather.nominal.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    },
+    {
+    "model": "workflows.abstractoption",
+    "fields": {
+      "name": "weather.numeric.arff",
+      "uid": "a853b275-4f38-45d4-ac88-679c1afc3a6b",
+      "value": "weather.numeric.arff",
+      "abstract_input": "268452b1-6016-404d-bdb8-01f03df4140f" }
+    }
+]

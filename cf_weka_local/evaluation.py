@@ -1,4 +1,4 @@
-__author__ = 'vid'
+__author__ = 'vid, darko'
 
 import jpype as jp
 import common
@@ -7,6 +7,13 @@ MAPPING_REPORT_START = 'Attribute mappings:'
 
 
 def build_classifier(slearner, sinstances):
+    '''The Build Classifier method: builds a classifier using a learner and data instances
+
+    :param slearner: serialized learner
+    :param sinstances: serialized Instances object
+    :return: serialized Classifier object
+    '''
+
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -22,6 +29,13 @@ def build_classifier(slearner, sinstances):
 
 
 def apply_classifier(sclassifier, sinstances):
+    '''The Apply Classifier method: calculates predictions for given test instances
+
+    :param sclassifier: serialized Classifier object
+    :param sinstances: serialized Instances object, test instances
+    :return: Instances object with predictions
+    '''
+
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -40,47 +54,15 @@ def apply_classifier(sclassifier, sinstances):
     return classes
 # end
 
-
-def sapply_mapped_classifier(sclassifier, soriginalInstances, sinstances):
-    if not jp.isThreadAttachedToJVM():
-        jp.attachThreadToJVM()
-
-    classifier = common.deserializeWekaObject(sclassifier)
-    original_training_instances = common.deserializeWekaObject(soriginalInstances)
-    instances = common.deserializeWekaObject(sinstances)
-
-    # serialize classifier with original instances to a file once again for the Mapped classifier
-    tfile = common.TemporaryFile(flags='wb+')
-    s = jp.JClass('weka.core.SerializationHelper')
-    s.writeAll(tfile.name, [classifier, original_training_instances])
-
-    # construct a MappedClassifier
-    mappedClassifier =  jp.JClass('weka.classifiers.misc.InputMappedClassifier')()
-    mappedClassifier.setIgnoreCaseForNames(True)
-    mappedClassifier.setTrim(True)
-    #mappedClassifier.setSuppressMappingReport(True)
-    #mc.setModelHeader(original_training_instances)
-    mappedClassifier.setModelPath(tfile.name)
-
-    # use the mapped classifier on new data
-    classes = []
-    classIndex = instances.classIndex()
-    if classIndex == -1:
-        raise ValueError('Class not set!')
-    classAttribute = instances.classAttribute()
-    for instance in instances:
-        label = int(mappedClassifier.classifyInstance(instance))
-        classes.append(classAttribute.value(label))
-
-    report = mappedClassifier.toString()
-    if MAPPING_REPORT_START in report:
-        report = report[report.index(MAPPING_REPORT_START):]
-
-    return classes, report
-# end
-
-
 def apply_mapped_classifier_get_instances(sclassifier, soriginalInstances, sinstances):
+    '''An advanced version of the Apply Classifier method.
+    Addresses incompatible training and test data, and returns a dataset with predictions.
+
+    :param sclassifier: serialized Classifier object
+    :param soriginalInstances: serialized Instances object, the original training instances
+    :param sinstances: serialized Instances object, test instances
+    :return: Instances object with predictions and a textual report from the InputMappedClassifier class
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -119,25 +101,6 @@ def apply_mapped_classifier_get_instances(sclassifier, soriginalInstances, sinst
     return common.serializeWekaObject(instances), report
 # end
 
-
-def apply_classifier_get_instances(sclassifier, sinstances):
-    if not jp.isThreadAttachedToJVM():
-        jp.attachThreadToJVM()
-
-    classifier = common.deserializeWekaObject(sclassifier)
-    instances = common.deserializeWekaObject(sinstances)
-
-    classes = []
-    classIndex = instances.classIndex()
-    if classIndex == -1:
-        raise ValueError('Class not set!')
-    classAttribute = instances.classAttribute()
-    for instance in instances:
-        label = int(classifier.classifyInstance(instance))
-        instance.setClassValue(classAttribute.value(label))
-
-    return common.serializeWekaObject(instances)
-# end
 
 def cross_validate(slearner, sinstances, nfolds=10):
     if not jp.isThreadAttachedToJVM():

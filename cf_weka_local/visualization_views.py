@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def weka_local_display_summation(request,input_dict,output_dict,widget):
-    if sum(input_dict['intList']) == input_dict['sum']:
+    if sum(input_dict['intList']) == int(input_dict['sum']):
         check = 'The calculation appears correct.'
     else:
         check = 'The calculation appears incorrect!'

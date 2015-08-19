@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Correlation-based Feature Subset Selection",
       "static_image": "", 
-      "action": "weka_local_AttributeSelection",
+      "action": "weka_local_FeatureSelection",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 
@@ -21,17 +21,17 @@
       "interactive": false, 
       "is_streaming": false, 
       "order": 1, 
-      "name": "Correlation-based Attribute Selection"
+      "name": "Correlation-based Feature Selection"
     }
   }, 
   {
     "model": "workflows.abstractinput", 
     "fields": {
       "widget": "b4201076-ea04-48b0-aea1-6a1903f7fdf6", 
-      "name": "instances", 
+      "name": "instances_in",
       "short_name": "ins", 
       "default": "", 
-      "description": "input file", 
+      "description": "input",
       "required": false, 
       "multi": false, 
       "parameter_type": null, 
@@ -45,9 +45,9 @@
     "model": "workflows.abstractoutput", 
     "fields": {
       "widget": "b4201076-ea04-48b0-aea1-6a1903f7fdf6", 
-      "name": "selected", 
+      "name": "instances_out",
       "short_name": "sel", 
-      "description": "selected instances", 
+      "description": "after selecting a feature subset",
       "variable": "selected", 
       "order": 1, 
       "uid": "ca45e6ce-6c58-436e-8a4f-173ddad1a22d"

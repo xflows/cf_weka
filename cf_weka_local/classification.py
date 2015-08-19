@@ -1,10 +1,15 @@
-__author__ = 'vid'
+__author__ = 'vid, darko'
 
 import jpype as jp
 import common
 
 
 def J48_learner(params=None):
+    '''Weka decision tree learner J48
+
+    :param params: parameters in textual form to pass to the J48 Weka class (e.g. "-C 0.25 -M 2")
+    :return: serialized Weka J48 object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -15,6 +20,11 @@ def J48_learner(params=None):
 
 
 def Naive_Bayes(params=None):
+    '''Naive Bayes classifier provided by Weka. Naive Bayes is a simple probabilistic classifier based on applying the Bayes' theorem.
+
+    :param params: parameters in textual form to pass to the NaiveBayes Weka class
+    :return: serialized Weka NaiveBayes object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -25,6 +35,11 @@ def Naive_Bayes(params=None):
 
 
 def LibSVM(params=None):
+    '''Support Vector Machine learner provided by Weka
+
+    :param params: parameters in textual form to pass to the LibSVM Weka class
+    :return: serialized Weka LibSVM object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
     svm = jp.JClass('weka.classifiers.functions.LibSVM')()
@@ -34,6 +49,11 @@ def LibSVM(params=None):
 
 
 def JRip(params=None):
+    '''The RIPPER rule learner by Weka
+
+    :param params: parameters in textual form to pass to the JRip Weka class
+    :return: serialized Weka JRip object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -46,6 +66,11 @@ def JRip(params=None):
 
 
 def KStar(params=None):
+    '''Instance-Based learner K* by Weka
+
+    :param params: parameters in textual form to pass to the KStar Weka class
+    :return: serialized Weka KStar object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -56,6 +81,11 @@ def KStar(params=None):
 
 
 def REPTree(params=None):
+    '''A REP Tree, which is a fast decision tree learner. Builds a decision/regression tree using information gain/variance and prunes it using reduced-error pruning
+
+    :param params: parameters in textual form to pass to the REPTree Weka class
+    :return: serialized Weka REPTree object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -66,6 +96,11 @@ def REPTree(params=None):
 
 
 def RandomTree(params=None):
+    '''A tree that considers K randomly chosen attributes at each node, and performs no pruning
+
+    :param params: parameters in textual form to pass to the RandomTree Weka class
+    :return: serialized Weka RandomTree object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -76,6 +111,11 @@ def RandomTree(params=None):
 
 
 def RandomForest(params=None):
+    '''Random Forest learner by Weka
+
+    :param params: parameters in textual form to pass to the RandomForest Weka class
+    :return: serialized Weka RandomForest object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -86,6 +126,11 @@ def RandomForest(params=None):
 
 
 def Multilayer_Perceptron(params=None):
+    '''Feedforward artificial neural network, using backpropagation to classify instances
+
+    :param params: parameters in textual form to pass to the MultilayerPerceptron Weka class
+    :return: serialized Weka MultilayerPerceptron object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -96,6 +141,11 @@ def Multilayer_Perceptron(params=None):
 
 
 def SMO(params=None):
+    '''A support vector classifier, trained using a sequential minimal optimization (SMO) algorithm
+
+    :param params: parameters in textual form to pass to the SMO Weka class
+    :return: serialized Weka SMO object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -105,6 +155,11 @@ def SMO(params=None):
 # end
 
 def Logistic(params=None):
+    '''Logistic regression by Weka
+
+    :param params: parameters in textual form to pass to the Logistic Weka class
+    :return: serialized Weka Logistic object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
     
@@ -114,6 +169,11 @@ def Logistic(params=None):
 # end
 
 def knn_IBk(params=None):
+    '''K-nearest neighbours classifier by Weka
+
+    :param params: parameters in textual form to pass to the IBk Weka class
+    :return: serialized Weka IBk object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -122,6 +182,11 @@ def knn_IBk(params=None):
     return common.serializeWekaObject(model)
 
 def ZeroR(params=None):
+    '''Weka's ZeroR classifier: predicts the mean (for a numeric class) or the mode (for a nominal class).
+
+    :param params: parameters in textual form to pass to the ZeroR Weka class
+    :return: serialized Weka ZeroR object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
     
@@ -131,12 +196,11 @@ def ZeroR(params=None):
 # end
 
 
-def AttSel(instances, params=None):
-    """Correlation-based Feature Subset Selection
+def FeatSel(instances):
+    """Correlation-based Feature Subset Selection, as implemented by the CfsSubsetEval class of Weka
 
-    :param instances:
-    :param params:
-    :return:
+    :param instances: serialized Weka Instances object
+    :return: serialized Weka Instances object
     """
 
 
@@ -164,13 +228,16 @@ def AttSel(instances, params=None):
     attsel_filter.setSearch(attsel_search)
     attsel_filter.setInputFormat(data) 
 
-    #print "Izbrani atributi: "
-    #print Filter.useFilter(data, attsel_filter)
-
     return  common.serializeWekaObject(Filter.useFilter(data, attsel_filter))
 # end
 
 def normalize(instances, params=None):
+    '''Normalizes all numeric values in the given dataset (apart from the class attribute, if set)
+
+    :param instances: serialized Weka Instances object
+    :param params: parameters in textual form to pass to the Normalize Weka class
+    :return: serialized Weka Instances object
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
@@ -186,13 +253,6 @@ def normalize(instances, params=None):
     normalize_filter.setInputFormat(data)
 
     return  common.serializeWekaObject(Filter.useFilter(data, normalize_filter))
-# end
-
-#    Normalize norm = new Normalize();
-#    norm.setInputFormat(training_data_filter1); ???
-#    Instances processed_training_data = Filter.useFilter(training_data_filter1, norm);
-
-
 
 
 

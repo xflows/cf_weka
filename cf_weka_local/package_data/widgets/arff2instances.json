@@ -20,7 +20,7 @@
       "interactive": false, 
       "is_streaming": false, 
       "order": 1, 
-      "name": "Arff To Weka Instances"
+      "name": "Import Dataset From an ARFF Textual Format"
     }
   }, 
   {
@@ -44,9 +44,9 @@
     "model": "workflows.abstractoutput", 
     "fields": {
       "widget": "9f7b0e47-3c27-4866-8418-63487b7b5e52", 
-      "name": "instances", 
-      "short_name": "ins", 
-      "description": "instances", 
+      "name": "dataset",
+      "short_name": "dat",
+      "description": "dataset",
       "variable": "instances", 
       "order": 1, 
       "uid": "96e0bc7f-35d6-4124-99cc-dab18439952e"

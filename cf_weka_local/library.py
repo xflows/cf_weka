@@ -1,20 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- 
 
-__author__ = 'darkoa'
+__author__ = 'vid, darko'
 
 import re
-import classification # dodal
-import evaluation # dodal
-import utilities # dodal
+import classification
+import evaluation
+import utilities
 
-
-# def test1(input_dict):
-#     """aaa """
-#     output_dict={}
-#     output_dict['bayesout'] = 0
-#     return output_dict
-
+#
+# INTEGERS
+#
 
 def weka_local_create_integers(input_dict):
     intStr = input_dict['intStr']
@@ -91,10 +87,10 @@ def weka_local_REP_Tree(input_dict):
     return {'learner': classification.REPTree()}
 
 
-def weka_local_AttributeSelection(input_dict):
+def weka_local_FeatureSelection(input_dict):
     instances = input_dict['instances']
     output_dict = {}
-    output_dict['selected'] = classification.AttSel(instances)
+    output_dict['selected'] = classification.FeatSel(instances)
     return output_dict
 
 def weka_local_Normalize(input_dict):
@@ -169,4 +165,8 @@ def weka_local_GetAttributeList(input_dict):
     output_dict['attr_list'] = utilities.get_attr_list(arff_file)
     return output_dict
 
-
+def weka_local_LoadUCI(input_dict):
+    arff_file = input_dict['filename']
+    output_dict = {}
+    output_dict['data'] = utilities.load_uci(arff_file)
+    return output_dict

@@ -5,12 +5,11 @@
       "category": "1888aa38-270f-423b-8d5f-e08f23c1a3b9",
       "treeview_image": "", 
       "uid": "a5eb6ec2-9d01-4768-8420-74e2527625de", 
-      "windows_queue": false, 
-
+      "windows_queue": false,
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "", 
-      "description": "", 
+      "description": "An advanced version of the Apply Classifier method.\nAddresses incompatible training and test data, and returns a dataset with predictions.\n      Has the ability to calculate model predictions for a dataset with the same structure or a slightly modified structure. In particular, model attributes that are not found in the incoming instances receive missing values, so do incoming nominal attribute values that the classifier has not seen before.",
       "static_image": "", 
       "action": "weka_local_ApplyMappedClassifierGetInstances",
       "visualization_view": "", 
@@ -21,7 +20,7 @@
       "interactive": false, 
       "is_streaming": false, 
       "order": 1, 
-      "name": "Apply Mapped Weka Classifier Get Instances"
+      "name": "Apply Mapped Weka Classifier (advanced)"
     }
   }, 
   {
@@ -29,9 +28,9 @@
     "fields": {
       "widget": "a5eb6ec2-9d01-4768-8420-74e2527625de", 
       "name": "original_training_instances", 
-      "short_name": "ori", 
+      "short_name": "dat",
       "default": "", 
-      "description": "", 
+      "description": "Original training dataset, needed only to perform the attribute mapping",
       "required": false, 
       "multi": false, 
       "parameter_type": null, 
@@ -45,10 +44,10 @@
     "model": "workflows.abstractinput", 
     "fields": {
       "widget": "a5eb6ec2-9d01-4768-8420-74e2527625de", 
-      "name": "instances", 
-      "short_name": "ins", 
+      "name": "test_instances",
+      "short_name": "dat",
       "default": "", 
-      "description": "", 
+      "description": "Dataset for which predictions will be calculated",
       "required": false, 
       "multi": false, 
       "parameter_type": null, 
@@ -79,9 +78,9 @@
     "model": "workflows.abstractoutput", 
     "fields": {
       "widget": "a5eb6ec2-9d01-4768-8420-74e2527625de", 
-      "name": "instances", 
-      "short_name": "ins", 
-      "description": "", 
+      "name": "test_instances_with_predictions",
+      "short_name": "dat",
+      "description": "Dataset with model predictions",
       "variable": "instances", 
       "order": 1, 
       "uid": "924900db-fc8c-42e1-94a2-412a6e0f01b4"
@@ -93,7 +92,7 @@
       "widget": "a5eb6ec2-9d01-4768-8420-74e2527625de", 
       "name": "mapping_report", 
       "short_name": "map", 
-      "description": "", 
+      "description": "A textual report of the attribute mapping",
       "variable": "mapping_report", 
       "order": 2, 
       "uid": "f0fdbff3-4a46-44b3-a7b9-5657066c9a43"
