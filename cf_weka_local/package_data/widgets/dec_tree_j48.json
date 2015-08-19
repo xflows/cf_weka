@@ -2,17 +2,17 @@
   {
     "model": "workflows.abstractwidget", 
     "fields": {
-      "category": "f4d466b2-29b8-4966-8f33-aff8bf0e522e", 
+      "category": "1c5ac714-84ca-4c93-befb-ce0c16148iii",
       "treeview_image": "", 
-      "uid": "5918f36d-6b82-4a4d-8b6d-e21fef53059d", 
+      "uid": "90acf4d3-03c1-4f89-bcec-fe3ca3e5945f", 
       "windows_queue": false, 
 
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "", 
-      "description": "", 
+      "description": "",
       "static_image": "", 
-      "action": "weka_local_Logistic",
+      "action": "weka_local_J48",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 
@@ -21,19 +21,19 @@
       "interactive": false, 
       "is_streaming": false, 
       "order": 1, 
-      "name": "Logistic Regression"
+      "name": "Decision Tree Learner J48"
     }
   }, 
   {
     "model": "workflows.abstractoutput", 
     "fields": {
-      "widget": "5918f36d-6b82-4a4d-8b6d-e21fef53059d", 
-      "name": "learner", 
+      "widget": "90acf4d3-03c1-4f89-bcec-fe3ca3e5945f", 
+      "name": "Learner", 
       "short_name": "lrn", 
       "description": "", 
       "variable": "learner", 
       "order": 1, 
-      "uid": "0f32fd94-dfbc-43bd-8509-a4108ac9fde8"
+      "uid": "7e9cea03-f6a8-4d44-acbb-b21ff32eef6c"
     }
   }
 ]

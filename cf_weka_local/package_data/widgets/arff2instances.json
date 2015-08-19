@@ -2,17 +2,16 @@
   {
     "model": "workflows.abstractwidget", 
     "fields": {
-      "category": "f4d466b2-29b8-4966-8f33-aff8bf0e522e", 
+      "category": "1f06ed94-c57a-4bb0-8f05-1212920c95a0",
       "treeview_image": "", 
-      "uid": "924b57f0-9ba2-4d87-90b8-c837da67f5c2", 
-      "windows_queue": false, 
-
+      "uid": "9f7b0e47-3c27-4866-8418-63487b7b5e52", 
+      "windows_queue": false,
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "", 
       "description": "", 
       "static_image": "", 
-      "action": "weka_local_WekaInstancesToArff",
+      "action": "weka_local_ArffToWekaInstances",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 
@@ -21,36 +20,36 @@
       "interactive": false, 
       "is_streaming": false, 
       "order": 1, 
-      "name": "Weka Instances To Arff"
+      "name": "Arff To Weka Instances"
     }
   }, 
   {
     "model": "workflows.abstractinput", 
     "fields": {
-      "widget": "924b57f0-9ba2-4d87-90b8-c837da67f5c2", 
-      "name": "Instances", 
-      "short_name": "ins", 
+      "widget": "9f7b0e47-3c27-4866-8418-63487b7b5e52", 
+      "name": "arff file", 
+      "short_name": "arf", 
       "default": "", 
       "description": "", 
       "required": false, 
       "multi": false, 
       "parameter_type": null, 
-      "variable": "instances", 
+      "variable": "arff", 
       "parameter": false, 
       "order": 1, 
-      "uid": "a39e5c9d-03a6-494c-b53a-f13d8277f643"
+      "uid": "14dd47cf-026f-40dd-a4bd-59144d5c03a3"
     }
   }, 
   {
     "model": "workflows.abstractoutput", 
     "fields": {
-      "widget": "924b57f0-9ba2-4d87-90b8-c837da67f5c2", 
-      "name": "arff file", 
-      "short_name": "arf", 
-      "description": "", 
-      "variable": "arff", 
+      "widget": "9f7b0e47-3c27-4866-8418-63487b7b5e52", 
+      "name": "instances", 
+      "short_name": "ins", 
+      "description": "instances", 
+      "variable": "instances", 
       "order": 1, 
-      "uid": "6916b2e8-c7d2-4929-833e-0ef17c25c79e"
+      "uid": "96e0bc7f-35d6-4124-99cc-dab18439952e"
     }
   }
 ]

@@ -43,14 +43,6 @@ def JRip(params=None):
 # end
 
 
-def IBk(params=None):
-    if not jp.isThreadAttachedToJVM():
-        jp.attachThreadToJVM()
-
-    model = jp.JClass('weka.classifiers.lazy.IBk')()
-    model.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(model)
-# end
 
 
 def KStar(params=None):
@@ -120,6 +112,14 @@ def Logistic(params=None):
     model.setOptions(common.parseOptions(params))
     return common.serializeWekaObject(model)
 # end
+
+def knn_IBk(params=None):
+    if not jp.isThreadAttachedToJVM():
+        jp.attachThreadToJVM()
+
+    model = jp.JClass('weka.classifiers.lazy.IBk')()
+    model.setOptions(common.parseOptions(params))
+    return common.serializeWekaObject(model)
 
 def ZeroR(params=None):
     if not jp.isThreadAttachedToJVM():

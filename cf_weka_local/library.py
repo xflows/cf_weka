@@ -71,11 +71,25 @@ def weka_local_RandomForest(input_dict):
 def weka_local_Multilayer_Perceptron(input_dict):
     return {'learner': classification.Multilayer_Perceptron()}
 
+def weka_local_SMO(input_dict):
+    return {'learner': classification.SMO()}
+
+
 def weka_local_Logistic(input_dict):
     return {'learner': classification.Logistic()}
 
 def weka_local_ZeroR(input_dict):
     return {'learner': classification.Logistic()}
+
+def weka_local_knn_IBk(input_dict):
+    return {'learner': classification.knn_IBk()}
+
+def weka_local_Random_Tree(input_dict):
+    return {'learner': classification.RandomTree()}
+
+def weka_local_REP_Tree(input_dict):
+    return {'learner': classification.REPTree()}
+
 
 def weka_local_AttributeSelection(input_dict):
     instances = input_dict['instances']

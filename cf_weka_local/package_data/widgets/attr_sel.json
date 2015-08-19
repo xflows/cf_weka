@@ -21,7 +21,7 @@
       "interactive": false, 
       "is_streaming": false, 
       "order": 1, 
-      "name": "Attribute Selection"
+      "name": "Correlation-based Attribute Selection"
     }
   }, 
   {

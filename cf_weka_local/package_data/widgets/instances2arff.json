@@ -2,9 +2,9 @@
   {
     "model": "workflows.abstractwidget", 
     "fields": {
-      "category": "f4d466b2-29b8-4966-8f33-aff8bf0e522e", 
+      "category": "1f06ed94-c57a-4bb0-8f05-1212920c95a0",
       "treeview_image": "", 
-      "uid": "5ccfa30e-645a-4941-b0d0-1be5da3d9396", 
+      "uid": "924b57f0-9ba2-4d87-90b8-c837da67f5c2", 
       "windows_queue": false, 
 
       "interaction_view": "", 
@@ -12,7 +12,7 @@
       "image": "", 
       "description": "", 
       "static_image": "", 
-      "action": "weka_local_PrintModel",
+      "action": "weka_local_WekaInstancesToArff",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 
@@ -21,36 +21,36 @@
       "interactive": false, 
       "is_streaming": false, 
       "order": 1, 
-      "name": "Print Model"
+      "name": "Weka Instances To Arff"
     }
   }, 
   {
     "model": "workflows.abstractinput", 
     "fields": {
-      "widget": "5ccfa30e-645a-4941-b0d0-1be5da3d9396", 
-      "name": "Model", 
-      "short_name": "mod", 
+      "widget": "924b57f0-9ba2-4d87-90b8-c837da67f5c2", 
+      "name": "Instances", 
+      "short_name": "ins", 
       "default": "", 
       "description": "", 
       "required": false, 
       "multi": false, 
       "parameter_type": null, 
-      "variable": "model", 
+      "variable": "instances", 
       "parameter": false, 
       "order": 1, 
-      "uid": "905fad1a-da41-4671-a577-bda015678dc5"
+      "uid": "a39e5c9d-03a6-494c-b53a-f13d8277f643"
     }
   }, 
   {
     "model": "workflows.abstractoutput", 
     "fields": {
-      "widget": "5ccfa30e-645a-4941-b0d0-1be5da3d9396", 
-      "name": "Model as string", 
-      "short_name": "mod", 
+      "widget": "924b57f0-9ba2-4d87-90b8-c837da67f5c2", 
+      "name": "arff file", 
+      "short_name": "arf", 
       "description": "", 
-      "variable": "model_as_string", 
+      "variable": "arff", 
       "order": 1, 
-      "uid": "f252cc73-ce65-4fb9-a1a7-e12fb1a8f3f8"
+      "uid": "6916b2e8-c7d2-4929-833e-0ef17c25c79e"
     }
   }
 ]
