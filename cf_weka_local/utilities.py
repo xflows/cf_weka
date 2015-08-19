@@ -69,22 +69,21 @@ def load_uci(f = "cpu.arff"):
     :param f: the filename of the UCI file
     :return: serialized Weka Instances object
     '''
+    file_names = ["breast-cancer.arff","contact-lenses.arff","cpu.arff","cpu.with.vendor.arff","credit-g.arff","diabetes.arff","glass.arff","ionosphere.arff","iris.2D.arff","iris.arff","labor.arff","ReutersCorn-test.arff","ReutersCorn-train.arff","ReutersGrain-test.arff","ReutersGrain-train.arff","segment-challenge.arff","segment-test.arff","soybean.arff","supermarket.arff","unbalanced.arff","vote.arff","weather.nominal.arff","weather.numeric.arff"]
+    if not(f in file_names):
+        raise Exception("Illegal dataset requested.")
+
     base_dir = normpath(dirname(__file__))
     weka_dir = normpath(join(base_dir, 'weka'))
     data_dir = normpath(join(weka_dir, 'data'))
 
-    import cf_base.library as l
+    f = data_dir + os.sep + 'breast-cancer.arff'
+    fi = open(f,'r')
+    classification_dataset = fi.read()
+    fi.close()
 
-    # f = "cpu.arff"
-    f = data_dir + os.sep + f
-
-    res_dict = l.load_to_string({'file':f})
-
-    tmp = common.TemporaryFile(suffix='.arff')
-    tmp.writeString( res_dict['string'] )
-
-    source = jp.JClass('weka.core.converters.ConverterUtils$DataSource')(tmp.name)
-    instances = source.getDataSet()
+    sinstances = arff_to_weka_instances(classification_dataset)
+    instances = common.deserializeWekaObject(sinstances)
 
     classIndex=None
 

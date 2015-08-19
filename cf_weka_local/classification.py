@@ -34,18 +34,17 @@ def Naive_Bayes(params=None):
 # end
 
 
-def LibSVM(params=None):
-    '''Support Vector Machine learner provided by Weka
-
-    :param params: parameters in textual form to pass to the LibSVM Weka class
-    :return: serialized Weka LibSVM object
-    '''
-    if not jp.isThreadAttachedToJVM():
-        jp.attachThreadToJVM()
-    svm = jp.JClass('weka.classifiers.functions.LibSVM')()
-    svm.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(svm)
-# end
+# def LibSVM(params=None): # not working
+#     '''Support Vector Machine learner
+#
+#     :param params: parameters in textual form to pass to the LibSVM Weka class
+#     :return: serialized Weka LibSVM object
+#     '''
+#     if not jp.isThreadAttachedToJVM():
+#         jp.attachThreadToJVM()
+#     svm = jp.JClass('weka.classifiers.functions.LibSVM')()
+#     svm.setOptions(common.parseOptions(params))
+#     return common.serializeWekaObject(svm)
 
 
 def JRip(params=None):

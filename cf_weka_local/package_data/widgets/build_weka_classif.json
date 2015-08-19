@@ -28,8 +28,8 @@
     "model": "workflows.abstractinput", 
     "fields": {
       "widget": "6436a20c-0bbc-48c3-a96e-971c08d69d80", 
-      "name": "Instances", 
-      "short_name": "ins", 
+      "name": "Dataset",
+      "short_name": "data",
       "default": "", 
       "description": "to create the a classifier", 
       "required": false, 

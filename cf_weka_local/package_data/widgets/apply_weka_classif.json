@@ -28,10 +28,10 @@
     "model": "workflows.abstractinput",
     "fields": {
       "widget": "1406a00c-0b1c-48c3-a96e-971c08269d80",
-      "name": "Instances",
-      "short_name": "ins",
+      "name": "Dataset",
+      "short_name": "dat",
       "default": "",
-      "description": "to test the a classifier",
+      "description": "to test the classifier",
       "required": false,
       "multi": false,
       "parameter_type": null,
@@ -63,7 +63,7 @@
     "fields": {
       "widget": "1406a00c-0b1c-48c3-a96e-971c08269d80",
       "name": "instances_out",
-      "short_name": "ins",
+      "short_name": "dat",
       "description": "",
       "variable": "instances_out",
       "order": 1,

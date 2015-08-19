@@ -58,8 +58,8 @@ def weka_local_NB(input_dict): # =None sicer ne dela iz py konzole
 def weka_local_JRipper(input_dict):
     return {'learner': classification.JRip()}
 
-def weka_local_LibSVM(input_dict):
-    return {'learner': classification.LibSVM()}
+# def weka_local_LibSVM(input_dict):
+#     return {'learner': classification.LibSVM()} # not working
 
 def weka_local_RandomForest(input_dict):
     return {'learner': classification.RandomForest()}
