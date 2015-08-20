@@ -11,7 +11,7 @@
       "has_progress_bar": false, 
       "image": "", 
       "description": "A support vector classifier, trained using a sequential minimal optimization algorithm.",
-      "static_image": "", 
+      "static_image": "WEKA_SMO.png",
       "action": "weka_local_SMO",
       "visualization_view": "", 
       "streaming_visualization_view": "", 

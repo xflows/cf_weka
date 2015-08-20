@@ -10,7 +10,7 @@
       "has_progress_bar": false, 
       "image": "", 
       "description": "An advanced version of the Apply Classifier method.\nAddresses incompatible training and test data, and returns a dataset with predictions.\n      Has the ability to calculate model predictions for a dataset with the same structure or a slightly modified structure. In particular, model attributes that are not found in the incoming instances receive missing values, so do incoming nominal attribute values that the classifier has not seen before.",
-      "static_image": "", 
+      "static_image": "WEKA_ApplyClassifier.png",
       "action": "weka_local_ApplyMappedClassifierGetInstances",
       "visualization_view": "", 
       "streaming_visualization_view": "", 

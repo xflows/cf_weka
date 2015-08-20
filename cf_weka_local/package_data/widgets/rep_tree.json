@@ -11,7 +11,7 @@
       "has_progress_bar": false, 
       "image": "", 
       "description": "Widget implementing a REP Tree, which is a fast decision tree learner. Builds a decision/regression tree using information gain/variance and prunes it using reduced-error pruning (with backfitting). Only sorts values for numeric attributes once. Missing values are dealt with by splitting the corresponding instances into pieces (i.e. as in C4.5).",
-      "static_image": "", 
+      "static_image": "WEKA_REPTree.png",
       "action": "weka_local_REP_Tree",
       "visualization_view": "", 
       "streaming_visualization_view": "", 

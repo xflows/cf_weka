@@ -10,7 +10,7 @@
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "", 
-      "description": "", 
+      "description": "Normalizes all numeric values in the given dataset",
       "static_image": "", 
       "action": "weka_local_Normalize",
       "visualization_view": "", 

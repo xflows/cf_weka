@@ -2,7 +2,7 @@
   {
     "model": "workflows.abstractwidget", 
     "fields": {
-      "category": "1f06ed94-c57a-4bb0-8f05-1212920c95a0",
+      "category": "ef06ed94-c57a-4bb0-8f05-1212920c95a0",
       "treeview_image": "", 
       "uid": "de13912c-1b3d-4df4-aa83-d1522dd838dc", 
       "windows_queue": false, 
@@ -10,8 +10,8 @@
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "", 
-      "description": "", 
-      "static_image": "construction_work .png", 
+      "description": "Sum of Integers",
+      "static_image": "",
       "action": "weka_local_pre_display_summation", 
       "visualization_view": "weka_local_display_summation", 
       "streaming_visualization_view": "", 

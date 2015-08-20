@@ -103,6 +103,13 @@ def apply_mapped_classifier_get_instances(sclassifier, soriginalInstances, sinst
 
 
 def cross_validate(slearner, sinstances, nfolds=10):
+    '''K-Fold Cross Validation
+
+    :param slearner: serialized learner
+    :param sinstances: serialized Instances object
+    :param nfolds: the number of folds
+    :return: numeric accuracy, conf.matrix (text), textual accuracy by class, textual summary
+    '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 

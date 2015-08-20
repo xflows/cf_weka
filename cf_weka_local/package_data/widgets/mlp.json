@@ -11,7 +11,7 @@
       "has_progress_bar": false, 
       "image": "", 
       "description": "Feedforward artificial neural network, using backpropagation to classify instances",
-      "static_image": "", 
+      "static_image": "WEKA_MultilPerceptron.png",
       "action": "weka_local_RandomForest",
       "visualization_view": "", 
       "streaming_visualization_view": "", 

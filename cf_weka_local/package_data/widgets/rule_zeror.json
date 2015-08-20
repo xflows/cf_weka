@@ -10,7 +10,7 @@
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "", 
-      "description": "", 
+      "description": "Weka's ZeroR classifier: predicts the mean (for a numeric class) or the mode (for a nominal class).",
       "static_image": "", 
       "action": "weka_local_ZeroR",
       "visualization_view": "", 

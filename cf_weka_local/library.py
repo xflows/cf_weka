@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
+import cf_weka_local.preprocessing
 
 __author__ = 'vid, darko'
 
@@ -86,7 +87,7 @@ def weka_local_Logistic(input_dict):
 
 def weka_local_ZeroR(input_dict):
     """ZeroR Rule learner"""
-    return {'learner': classification.Logistic()}
+    return {'learner': classification.ZeroR()  }
 
 def weka_local_knn_IBk(input_dict):
     """K-Nearest-Neighbours learner IBk"""
@@ -99,12 +100,15 @@ def weka_local_Random_Tree(input_dict):
 def weka_local_REP_Tree(input_dict):
     return {'learner': classification.REPTree()}
 
+#
+# PREPROCESSING
+#
 
 def weka_local_FeatureSelection(input_dict):
     """Correlation-based Feature Subset Selection"""
     instances = input_dict['instances']
     output_dict = {}
-    output_dict['selected'] = classification.FeatSel(instances)
+    output_dict['selected'] = cf_weka_local.preprocessing.FeatSel(instances)
     return output_dict
 
 def weka_local_Normalize(input_dict):
@@ -112,7 +116,7 @@ def weka_local_Normalize(input_dict):
     instances = input_dict['instances']
     output_dict = {}
     # 1,0 -> normalizira na [0,1]; 2,-1 pa na [-1,1]
-    output_dict['normalized'] = classification.normalize(instances, '-S 2.0 -T -1.0')
+    output_dict['normalized'] = cf_weka_local.preprocessing.normalize(instances, '-S 2.0 -T -1.0')
     return output_dict
 
 #
@@ -121,10 +125,10 @@ def weka_local_Normalize(input_dict):
 
 def weka_local_Build_Classifier(input_dict):
     """Builds a classifier using a learner and data instances"""
-    learner = input_dict['learner']
-    instances = input_dict['instances']
+    slearner = input_dict['learner']
+    sinstances = input_dict['instances']
 
-    classifier = evaluation.build_classifier(learner, instances)
+    classifier = evaluation.build_classifier(slearner, sinstances)
 
     output_dict = {'classifier': classifier}
     return output_dict
@@ -152,7 +156,18 @@ def weka_local_Apply_Classifier(input_dict):
     output_dict = {'instances_out': instances_out}
     return output_dict
 
+def weka_local_Cross_Validate(input_dict):
+    """K-Fold Cross Validation"""
+    nfolds = int( input_dict["folds"] )
 
+    slearner = input_dict['learner']
+    sinstances = input_dict['instances']
+
+    accuracy, conf_matrix, acc_by_class, summary = evaluation.cross_validate(slearner, sinstances, nfolds=10)
+    return {'accuracy':accuracy,
+            'confusion_matrix':conf_matrix,
+            'accuracy_by_class':acc_by_class,
+            'summary':summary}
 
 #
 # UTILITIES

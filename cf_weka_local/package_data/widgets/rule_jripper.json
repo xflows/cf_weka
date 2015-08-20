@@ -11,7 +11,7 @@
       "has_progress_bar": false, 
       "image": "", 
       "description": "", 
-      "static_image": "", 
+      "static_image": "WEKA_JRip.png",
       "action": "weka_local_JRipper",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
