@@ -4,49 +4,9 @@ import cf_weka_local.preprocessing
 
 __author__ = 'vid, darko'
 
-import re
 import classification
 import evaluation
 import utilities
-
-#
-# INTEGERS
-#
-
-def weka_local_create_integers(input_dict):
-    """Creates an Integer List"""
-    intStr = input_dict['intStr']
-    intList = []
-    for i in re.findall(r'\w+', intStr):
-        try:
-            intList.append(int(i))
-        except:
-            pass
-    if input_dict['sort'].lower() == "true":
-        intList.sort()
-    return {'intList':intList}
-
-def weka_local_sum_integers(input_dict):
-    """Sum of Integers"""
-    intList = input_dict['intList']
-    return {'sum':sum(intList)}
-
-def weka_local_pre_filter_integers(input_dict):
-    return input_dict
-
-def weka_local_post_filter_integers(postdata,input_dict,output_dict):
-    """Filter Integers"""
-    intListOut = postdata['intListOut']
-    intList = []
-    for i in intListOut:
-        try:
-            intList.append(int(i))
-        except:
-            pass
-    return {'intList': intList}
-
-def weka_local_pre_display_summation(input_dict):
-    return {}
 
 #
 # CLASSIFICATION ALGORITHMS
