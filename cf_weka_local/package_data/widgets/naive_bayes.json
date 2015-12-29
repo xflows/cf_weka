@@ -2,7 +2,7 @@
   {
     "model": "workflows.abstractwidget", 
     "fields": {
-      "category": "1c5ac714-84ca-4c93-befb-ce0c16148iii",
+      "category": "3c5ac714-84ca-4c93-befb-ce0c16148iii",
       "treeview_image": "", 
       "uid": "223bbb46-e5e8-495a-8b2e-f95cbb2c7a0d",
       "windows_queue": false, 
@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Naive Bayes classifier. Naive Bayes is a simple probabilistic classifier based on applying the Bayes' theorem.",
       "static_image": "WEKA_naiveBayes.png",
-      "action": "weka_local_NB",
+      "action": "wekaLocalNB",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 
@@ -21,7 +21,7 @@
       "interactive": false, 
       "is_streaming": false, 
       "order": 1, 
-      "name": "Naive Bayes"
+      "name": "Naive Bayes (WEKA)"
     }
   }, 
   {

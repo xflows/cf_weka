@@ -11,7 +11,7 @@
       "image": "", 
       "description": "K-Fold Cross Validation",
       "static_image": "WEKA_CrossVal.png", 
-      "action": "weka_local_Cross_Validate",
+      "action": "wekaLocalCrossValidate",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Correlation-based Feature Subset Selection",
       "static_image": "", 
-      "action": "weka_local_FeatureSelection",
+      "action": "wekaLocalFeatureSelection",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

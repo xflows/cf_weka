@@ -2,12 +2,12 @@ __author__ = 'vid, darko'
 
 import jpype as jp
 import common
+import utilities as ut
 
 MAPPING_REPORT_START = 'Attribute mappings:'
 
-
-def build_classifier(slearner, sinstances):
-    '''The Build Classifier method: builds a classifier using a learner and data instances
+def build_clusterer(slearner, sinstances):
+    '''The Build Classifier method
 
     :param slearner: serialized learner
     :param sinstances: serialized Instances object
@@ -20,55 +20,29 @@ def build_classifier(slearner, sinstances):
     learner = common.deserializeWekaObject(slearner)
     instances = common.deserializeWekaObject(sinstances)
 
-    if instances.classIndex() == -1:
-        raise ValueError('Class not set!')
-
-    learner.buildClassifier(instances)
+    learner.buildClusterer(instances)
     return common.serializeWekaObject(learner)
-# end
 
 
-def apply_classifier(sclassifier, sinstances):
-    '''The Apply Classifier method: calculates predictions for given test instances
-
-    :param sclassifier: serialized Classifier object
-    :param sinstances: serialized Instances object, test instances
-    :return: Instances object with predictions
-    '''
-
-    if not jp.isThreadAttachedToJVM():
-        jp.attachThreadToJVM()
-
-    classifier = common.deserializeWekaObject(sclassifier)
-    instances = common.deserializeWekaObject(sinstances)
-
-    classes = []
-    classIndex = instances.classIndex()
-    if classIndex == -1:
-        raise ValueError('Class not set!')
-    classAttribute = instances.classAttribute()
-    for instance in instances:
-        label = int(classifier.classifyInstance(instance))
-        classes.append(classAttribute.value(label))
-
-    return classes
-# end
-
-def apply_mapped_classifier_get_instances(sclassifier, soriginalInstances, sinstances):
+def apply_mapped_classifier_get_instances(wekaClassifier, originalData, data):
     '''An advanced version of the Apply Classifier method.
     Addresses incompatible training and test data, and returns a dataset with predictions.
 
-    :param sclassifier: serialized Classifier object
-    :param soriginalInstances: serialized Instances object, the original training instances
-    :param sinstances: serialized Instances object, test instances
-    :return: Instances object with predictions and a textual report from the InputMappedClassifier class
+    :param wekaClassifier: WekaClassifier object
+    :param originalData: original training instances, bunch
+    :param data: test instances, bunch
+    :return: ???Instances object with predictions and a textual report from the InputMappedClassifier class
     '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
-    classifier = common.deserializeWekaObject(sclassifier)
-    original_training_instances = common.deserializeWekaObject(soriginalInstances)
-    instances = common.deserializeWekaObject(sinstances)
+    try:
+        classifier = common.deserializeWekaObject(wekaClassifier.sclassifier)
+    except:
+        raise Exception("Only WEKA classifiers/models supported. Please provide a valid WEKA learner.")
+
+    original_training_instances = ut.convertBunchToWekaInstances(originalData)
+    instances = ut.convertBunchToWekaInstances(data)
 
     # serialize classifier with original instances to a file once again for the Mapped classifier
     tfile = common.TemporaryFile(flags='wb+')
@@ -83,38 +57,42 @@ def apply_mapped_classifier_get_instances(sclassifier, soriginalInstances, sinst
     #mc.setModelHeader(original_training_instances)
     mappedClassifier.setModelPath(tfile.name)
 
-    # use the mapped classifier on new data
-    classIndex = instances.classIndex()
-    if classIndex == -1:
-        raise ValueError('Class not set!')
-    classAttribute = instances.classAttribute()
-    for instance in instances:
-        # Thrown to indicate that an array has been accessed with an illegal index. 
-        # The index is either negative or greater than or equal to the size of the array.
-        label = int(mappedClassifier.classifyInstance(instance)) # 20-fold trains Tezave zaradi premalo primerov v foldu?
-        instance.setClassValue(classAttribute.value(label))
+    predictions = []
+    try:
+        for instance in instances:
+            label = int(mappedClassifier.classifyInstance(instance))
+            predictions.append(label)
+
+        data["targetPredicted"] = predictions
+    except:
+        raise Exception("Classifier not built. Please use the Build Classifier widget first.")
 
     report = mappedClassifier.toString()
     if MAPPING_REPORT_START in report:
         report = report[report.index(MAPPING_REPORT_START):]
 
-    return common.serializeWekaObject(instances), report
+    return data, report
 # end
 
 
-def cross_validate(slearner, sinstances, nfolds=10):
+def cross_validate(wekaClassifier, bunch, nfolds=10):
     '''K-Fold Cross Validation
 
-    :param slearner: serialized learner
-    :param sinstances: serialized Instances object
+    :param wekaClassifier: a WekaClassifier object
+    :param bunch:
     :param nfolds: the number of folds
     :return: numeric accuracy, conf.matrix (text), textual accuracy by class, textual summary
     '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
-    learner = common.deserializeWekaObject(slearner)
-    instances = common.deserializeWekaObject(sinstances)
+    try:
+        learner = common.deserializeWekaObject(wekaClassifier.sclassifier)
+    except:
+        raise Exception("Only WEKA classifiers/models supported. Please provide a valid WEKA learner.")
+
+    # instances = common.deserializeWekaObject(sinstances)
+    instances = ut.convertBunchToWekaInstances(bunch)
 
     buff = jp.JClass('java.lang.StringBuffer')()
     out = jp.JClass('weka.classifiers.evaluation.output.prediction.PlainText')()

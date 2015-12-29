@@ -2,16 +2,16 @@
   {
     "model": "workflows.abstractwidget", 
     "fields": {
-      "category": "1f06ed94-c57a-4bb0-8f05-1212920c95a0",
+      "category": "ef06ed94-c57a-4bb0-8f05-1212920c95a0",
       "treeview_image": "", 
       "uid": "9f7b0e47-3c27-4866-8418-63487b7b5e52", 
       "windows_queue": false,
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "", 
-      "description": "Imports a Weka Dataset From an ARFF Textual Format",
+      "description": "Imports a Dataset From an ARFF Textual Format",
       "static_image": "WEKA_arff.png",
-      "action": "weka_local_ArffToWekaInstances",
+      "action": "wekaLocalImportDatasetFromARFF",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 
@@ -20,7 +20,7 @@
       "interactive": false, 
       "is_streaming": false, 
       "order": 1, 
-      "name": "Import Dataset From an ARFF Textual Format"
+      "name": "Import Dataset From an ARFF File"
     }
   }, 
   {

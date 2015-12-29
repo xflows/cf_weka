@@ -1,14 +1,14 @@
 import jpype as jp
-from cf_weka_local import common
+from cf_weka_local import common, utilities
 
 __author__ = 'darkoa'
 
 
-def FeatSel(instances):
+def correlationBasedfeatSel(bunch):
     """Correlation-based Feature Subset Selection, as implemented by the CfsSubsetEval class of Weka
 
-    :param instances: serialized Weka Instances object
-    :return: serialized Weka Instances object
+    :param bunch: dataset
+    :return: new dataset
     """
 
 
@@ -16,7 +16,7 @@ def FeatSel(instances):
         jp.attachThreadToJVM()
 
     # Instances data!
-    data = common.deserializeWekaObject(instances)
+    data = utilities.convertBunchToWekaInstances(bunch)
 
     Filter = jp.JClass('weka.filters.Filter')
     #attsel_Filter = Filter()
@@ -36,28 +36,31 @@ def FeatSel(instances):
     attsel_filter.setSearch(attsel_search)
     attsel_filter.setInputFormat(data)
 
-    return  common.serializeWekaObject(Filter.useFilter(data, attsel_filter))
+    newInstances = Filter.useFilter(data, attsel_filter)
+
+    return utilities.convertWekaInstancesToBunch(newInstances)
 
 
-def normalize(instances, params=None):
+def normalize(bunch, params=None):
     '''Normalizes all numeric values in the given dataset (apart from the class attribute, if set)
 
-    :param instances: serialized Weka Instances object
+    :param bunch: dataset
     :param params: parameters in textual form to pass to the Normalize Weka class
-    :return: serialized Weka Instances object
+    :return: dataset
     '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
 
     # Instances data!
-    data = common.deserializeWekaObject(instances)
+    data = utilities.convertBunchToWekaInstances(bunch)
 
     Filter = jp.JClass('weka.filters.Filter')
-    #attsel_Filter = Filter()
 
     Normalize = jp.JClass('weka.filters.unsupervised.attribute.Normalize')
     normalize_filter = Normalize()
     normalize_filter.setOptions(common.parseOptions(params))
     normalize_filter.setInputFormat(data)
 
-    return  common.serializeWekaObject(Filter.useFilter(data, normalize_filter))
+    newInstances = Filter.useFilter(data, normalize_filter)
+
+    return utilities.convertWekaInstancesToBunch(newInstances)

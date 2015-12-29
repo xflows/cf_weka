@@ -2,7 +2,7 @@
   {
     "model": "workflows.abstractwidget",
     "fields": {
-      "category": "1f06ed94-c57a-4bb0-8f05-1212920c95a0",
+      "category": "ef06ed94-c57a-4bb0-8f05-1212920c95a0",
       "treeview_image": "treeview/UCI-2-ODT.png",
       "uid": "4e8683ae-c571-413c-a592-2093de96ea3b",
       "is_streaming": false,
@@ -11,7 +11,7 @@
       "image": "",
       "description": "Loads a UCI dataset from the ones provided along with this package",
       "static_image": "UCI-2-ODT.png",
-      "action": "weka_local_LoadUCI",
+      "action": "wekaLocalLoadUCI",
       "visualization_view": "",
       "streaming_visualization_view": "",
       "post_interact_action": "",
@@ -20,7 +20,7 @@
       "interactive": false,
       "windows_queue": false,
       "order": 1,
-      "name": "Load a UCI Dataset (WEKA)"
+      "name": "Load a UCI Dataset (additional)"
     }
   },
   {

@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Get Attribute List of a Weka Dataset",
       "static_image": "", 
-      "action": "weka_local_GetAttributeList",
+      "action": "wekaLocalGetAttributeList",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

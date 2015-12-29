@@ -2,7 +2,7 @@
   {
     "model": "workflows.abstractwidget", 
     "fields": {
-      "category": "1c5ac714-84ca-4c93-befb-ce0c16148iii",
+      "category": "3c5ac714-84ca-4c93-befb-ce0c16148iii",
       "treeview_image": "", 
       "uid": "124bcc46-e5e8-495a-8b2e-f95cbb2c7a0d",
       "windows_queue": false, 
@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Feedforward artificial neural network, using backpropagation to classify instances",
       "static_image": "WEKA_MultilPerceptron.png",
-      "action": "weka_local_RandomForest",
+      "action": "wekaLocalMultilayerPerceptron",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 
@@ -21,7 +21,7 @@
       "interactive": false, 
       "is_streaming": false, 
       "order": 1, 
-      "name": "Multilayer Perceptron"
+      "name": "Multilayer Perceptron (WEKA)"
     }
   }, 
   {

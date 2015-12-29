@@ -3,9 +3,9 @@ __author__ = 'vid, darko'
 import jpype as jp
 
 import common
+from weka_classifier import WekaClassifier
 
-
-def J48_learner(params=None):
+def J48(params=None):
     '''Weka decision tree learner J48
 
     :param params: parameters in textual form to pass to the J48 Weka class (e.g. "-C 0.25 -M 2")
@@ -16,11 +16,12 @@ def J48_learner(params=None):
 
     model = jp.JClass('weka.classifiers.trees.J48')()
     model.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(model)
-# end
+
+    return WekaClassifier(common.serializeWekaObject(model))
 
 
-def Naive_Bayes(params=None):
+
+def naiveBayes(params=None):
     '''Naive Bayes classifier provided by Weka. Naive Bayes is a simple probabilistic classifier based on applying the Bayes' theorem.
 
     :param params: parameters in textual form to pass to the NaiveBayes Weka class
@@ -31,24 +32,7 @@ def Naive_Bayes(params=None):
 
     model = jp.JClass('weka.classifiers.bayes.NaiveBayes')()
     model.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(model)
-
-def JRip(params=None):
-    '''The RIPPER rule learner by Weka
-
-    :param params: parameters in textual form to pass to the JRip Weka class
-    :return: serialized Weka JRip object
-    '''
-    if not jp.isThreadAttachedToJVM():
-        jp.attachThreadToJVM()
-
-    model = jp.JClass('weka.classifiers.rules.JRip')()
-    model.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(model)
-# end
-
-
-
+    return WekaClassifier(common.serializeWekaObject(model))
 
 def KStar(params=None):
     '''Instance-Based learner K* by Weka
@@ -61,7 +45,7 @@ def KStar(params=None):
 
     model = jp.JClass('weka.classifiers.lazy.KStar')()
     model.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(model)
+    return WekaClassifier(common.serializeWekaObject(model))
 # end
 
 
@@ -76,7 +60,7 @@ def REPTree(params=None):
 
     model = jp.JClass('weka.classifiers.trees.REPTree')()
     model.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(model)
+    return WekaClassifier(common.serializeWekaObject(model))
 # end
 
 
@@ -91,7 +75,7 @@ def RandomTree(params=None):
 
     model = jp.JClass('weka.classifiers.trees.RandomTree')()
     model.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(model)
+    return WekaClassifier(common.serializeWekaObject(model))
 
 
 
@@ -106,7 +90,7 @@ def RandomForest(params=None):
 
     model = jp.JClass('weka.classifiers.trees.RandomForest')()
     model.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(model)
+    return WekaClassifier(common.serializeWekaObject(model))
 
 
 
@@ -121,7 +105,7 @@ def Multilayer_Perceptron(params=None):
 
     model = jp.JClass('weka.classifiers.functions.MultilayerPerceptron')()
     model.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(model)
+    return WekaClassifier(common.serializeWekaObject(model))
 
 
 
@@ -136,7 +120,7 @@ def SMO(params=None):
 
     model = jp.JClass('weka.classifiers.functions.SMO')()
     model.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(model)
+    return WekaClassifier(common.serializeWekaObject(model))
 
 
 def Logistic(params=None):
@@ -150,10 +134,10 @@ def Logistic(params=None):
     
     model = jp.JClass('weka.classifiers.functions.Logistic')()
     model.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(model)
+    return WekaClassifier(common.serializeWekaObject(model))
 # end
 
-def knn_IBk(params=None):
+def IBk(params=None):
     '''K-nearest neighbours classifier by Weka
 
     :param params: parameters in textual form to pass to the IBk Weka class
@@ -164,27 +148,35 @@ def knn_IBk(params=None):
 
     model = jp.JClass('weka.classifiers.lazy.IBk')()
     model.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(model)
+    return WekaClassifier(common.serializeWekaObject(model))
 
-def ZeroR(params=None):
-    '''Weka's ZeroR classifier: predicts the mean (for a numeric class) or the mode (for a nominal class).
+# ++++++++++++ rules ++++++++++++
 
-    :param params: parameters in textual form to pass to the ZeroR Weka class
-    :return: serialized Weka ZeroR object
+def rulesJRip(params=None):
+    '''The RIPPER rule learner by Weka
+
+    :param params: parameters in textual form to pass to the rulesJRip Weka class
+    :return: serialized Weka rulesJRip object
+    '''
+    if not jp.isThreadAttachedToJVM():
+        jp.attachThreadToJVM()
+
+    model = jp.JClass('weka.classifiers.rules.JRip')()
+    model.setOptions(common.parseOptions(params))
+    return WekaClassifier(common.serializeWekaObject(model))
+# end
+
+
+def rulesZeroR(params=None):
+    '''Weka's rulesZeroR classifier: predicts the mean (for a numeric class) or the mode (for a nominal class).
+
+    :param params: parameters in textual form to pass to the rulesZeroR Weka class
+    :return: serialized Weka rulesZeroR object
     '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
     
     model = jp.JClass('weka.classifiers.rules.ZeroR')()
-    #model.setOptions(common.parseOptions(params))
-    return common.serializeWekaObject(model)
+    model.setOptions(common.parseOptions(params))
 
-
-
-
-
-
-
-
-
-
+    return WekaClassifier(common.serializeWekaObject(model))

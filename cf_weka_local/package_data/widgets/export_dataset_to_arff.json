@@ -2,7 +2,7 @@
   {
     "model": "workflows.abstractwidget", 
     "fields": {
-      "category": "1f06ed94-c57a-4bb0-8f05-1212920c95a0",
+      "category": "ef06ed94-c57a-4bb0-8f05-1212920c95a0",
       "treeview_image": "", 
       "uid": "924b57f0-9ba2-4d87-90b8-c837da67f5c2", 
       "windows_queue": false, 
@@ -10,10 +10,10 @@
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "", 
-      "description": "Export a Weka Dataset to an ARFF Textual Format",
+      "description": "Export a Dataset to an ARFF Textual Format (Weka)",
       "static_image": "WEKA_arff.png",
-      "action": "weka_local_WekaInstancesToArff",
-      "visualization_view": "", 
+      "action": "wekaLocalExportDatasetToARFF",
+      "visualization_view": "wekaLocalExportDatasetToARFF",
       "streaming_visualization_view": "", 
       "post_interact_action": "", 
       "wsdl_method": "", 
@@ -21,7 +21,7 @@
       "interactive": false, 
       "is_streaming": false, 
       "order": 1, 
-      "name": "Export Dataset to an ARFF Textual Format"
+      "name": "Export Dataset to ARFF File"
     }
   }, 
   {
@@ -39,18 +39,6 @@
       "parameter": false, 
       "order": 1, 
       "uid": "a39e5c9d-03a6-494c-b53a-f13d8277f643"
-    }
-  }, 
-  {
-    "model": "workflows.abstractoutput", 
-    "fields": {
-      "widget": "924b57f0-9ba2-4d87-90b8-c837da67f5c2", 
-      "name": "ARFF textual format",
-      "short_name": "arf", 
-      "description": "", 
-      "variable": "arff", 
-      "order": 1, 
-      "uid": "6916b2e8-c7d2-4929-833e-0ef17c25c79e"
     }
   }
 ]

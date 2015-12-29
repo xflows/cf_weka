@@ -2,7 +2,7 @@
   {
     "model": "workflows.abstractwidget", 
     "fields": {
-      "category": "1c5ac714-84ca-4c93-befb-ce0c16148iii",
+      "category": "3c5ac714-84ca-4c93-befb-ce0c16148iii",
       "treeview_image": "", 
       "uid": "90acf4d3-03c1-4f89-bcec-fe3ca3e5945f", 
       "windows_queue": false, 
@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Weka decision tree learner J48",
       "static_image": "WEKA_J48.png",
-      "action": "weka_local_J48",
+      "action": "wekaLocalDecisionTreeJ48",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 
@@ -21,7 +21,7 @@
       "interactive": false, 
       "is_streaming": false, 
       "order": 1, 
-      "name": "Decision Tree Learner J48"
+      "name": "Decision Tree Learner (WEKA-J48)"
     }
   }, 
   {
