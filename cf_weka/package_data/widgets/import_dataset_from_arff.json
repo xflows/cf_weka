@@ -1,0 +1,55 @@
+[
+  {
+    "model": "workflows.abstractwidget", 
+    "fields": {
+      "category": "ef06ed94-c57a-4bb0-8f05-1212920c95a0",
+      "treeview_image": "", 
+      "uid": "9f7b0e47-3c27-4866-8418-63487b7b5e52", 
+      "windows_queue": false,
+      "interaction_view": "", 
+      "has_progress_bar": false, 
+      "image": "", 
+      "description": "Imports a Dataset From an ARFF Textual Format",
+      "static_image": "WEKA_arff.png",
+      "action": "import_dataset_from_arff",
+      "visualization_view": "", 
+      "streaming_visualization_view": "", 
+      "post_interact_action": "", 
+      "wsdl_method": "", 
+      "wsdl": "", 
+      "interactive": false, 
+      "is_streaming": false, 
+      "order": 1, 
+      "name": "Import Dataset From an ARFF File"
+    }
+  }, 
+  {
+    "model": "workflows.abstractinput", 
+    "fields": {
+      "widget": "9f7b0e47-3c27-4866-8418-63487b7b5e52", 
+      "name": "arff file", 
+      "short_name": "arf", 
+      "default": "", 
+      "description": "", 
+      "required": false, 
+      "multi": false, 
+      "parameter_type": null, 
+      "variable": "arff", 
+      "parameter": false, 
+      "order": 1, 
+      "uid": "14dd47cf-026f-40dd-a4bd-59144d5c03a3"
+    }
+  }, 
+  {
+    "model": "workflows.abstractoutput", 
+    "fields": {
+      "widget": "9f7b0e47-3c27-4866-8418-63487b7b5e52", 
+      "name": "dataset",
+      "short_name": "dat",
+      "description": "dataset",
+      "variable": "instances", 
+      "order": 1, 
+      "uid": "96e0bc7f-35d6-4124-99cc-dab18439952e"
+    }
+  }
+]

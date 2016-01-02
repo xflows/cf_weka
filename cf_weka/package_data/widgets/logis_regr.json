@@ -1,0 +1,39 @@
+[
+  {
+    "model": "workflows.abstractwidget", 
+    "fields": {
+      "category": "3c5ac714-84ca-4c93-befb-ce0c16148iii",
+      "treeview_image": "", 
+      "uid": "5918f36d-6b82-4a4d-8b6d-e21fef53059d", 
+      "windows_queue": false, 
+
+      "interaction_view": "", 
+      "has_progress_bar": false, 
+      "image": "", 
+      "description": "Logistic Regression learner",
+      "static_image": "", 
+      "action": "logistic_regression",
+      "visualization_view": "", 
+      "streaming_visualization_view": "", 
+      "post_interact_action": "", 
+      "wsdl_method": "", 
+      "wsdl": "", 
+      "interactive": false, 
+      "is_streaming": false, 
+      "order": 1, 
+      "name": "Logistic Regression (WEKA)"
+    }
+  }, 
+  {
+    "model": "workflows.abstractoutput", 
+    "fields": {
+      "widget": "5918f36d-6b82-4a4d-8b6d-e21fef53059d", 
+      "name": "learner", 
+      "short_name": "lrn", 
+      "description": "", 
+      "variable": "learner", 
+      "order": 1, 
+      "uid": "0f32fd94-dfbc-43bd-8509-a4108ac9fde8"
+    }
+  }
+]
