@@ -1,9 +1,0 @@
-{
-  "model": "workflows.category",
-  "fields": {
-    "name": "Classification and Regresssion",
-    "order": 1,
-    "parent": "f4d466b2-29b8-4966-8f33-aff8bf0e522e",
-    "uid": "1c5ac714-84ca-4c93-befb-ce0c16148iii"
-  } 
-}
