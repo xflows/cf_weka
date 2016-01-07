@@ -23,7 +23,27 @@
       "order": 1, 
       "name": "Random Tree (WEKA)"
     }
-  }, 
+  },
+
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "widget": "1266aa46-e5e8-495a-8b2e-f95cbb2c7a0d",
+      "name": "Parameters",
+      "short_name": "p",
+      "default": "-K 0 -M 1",
+      "description": " -K <number of attributes>\n  Number of attributes to randomly investigate. (default 0)\n  (<0 = int(log_2(#predictors)+1)).\n -M <minimum number of instances>\n  Set minimum number of instances per leaf.\n  (default 1)\n -V <minimum variance for split>\n  Set minimum numeric class variance proportion\n  of train variance for split (default 1e-3).\n -S <num>\n  Seed for random number generator.\n  (default 1)\n -depth <num>\n  The maximum depth of the tree, 0 for unlimited.\n  (default 0)\n -N <num>\n  Number of folds for backfitting (default 0, no backfitting).\n -U\n  Allow unclassified instances.\n -B\n  Break ties randomly when several attributes look equally good.\n  ",
+      "required": false,
+      "multi": false,
+      "parameter_type": "text",
+      "variable": "params",
+      "parameter": true,
+      "order": 1,
+      "uid": "113452b1-6bb6-404d-bdb8-01f03df414a4"
+    }
+  },
+
+
   {
     "model": "workflows.abstractoutput", 
     "fields": {

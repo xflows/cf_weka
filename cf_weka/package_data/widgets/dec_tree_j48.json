@@ -24,6 +24,25 @@
       "name": "Decision Tree Learner (WEKA-J48)"
     }
   }, 
+
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "widget": "90acf4d3-03c1-4f89-bcec-fe3ca3e5945f",
+      "name": "Parameters",
+      "short_name": "p",
+      "default": "-C 0.25 -M 2",
+      "description": " -U\n  Use unpruned tree.\n \n -O\n  Do not collapse tree.\n \n -C <pruning confidence>\n  Set confidence threshold for pruning.\n  (default 0.25)\n \n -M <minimum number of instances>\n  Set minimum number of instances per leaf.\n  (default 2)\n \n -R\n  Use reduced error pruning.\n \n -N <number of folds>\n  Set number of folds for reduced error\n  pruning. One fold is used as pruning set.\n  (default 3)\n \n -B\n  Use binary splits only.\n \n -S\n  Don't perform subtree raising.\n \n -L\n  Do not clean up after the tree has been built.\n \n -A\n  Laplace smoothing for predicted probabilities.\n \n -J\n  Do not use MDL correction for info gain on numeric attributes.\n \n -Q <seed>\n  Seed for random data shuffling (default 1).\n \n -doNotMakeSplitPointActualValue\n  Do not make split point actual value.",
+      "required": false,
+      "multi": false,
+      "parameter_type": "text",
+      "variable": "params",
+      "parameter": true,
+      "order": 1,
+      "uid": "124452b1-6016-404d-bdb8-01f03df414a4"
+    }
+  },
+
   {
     "model": "workflows.abstractoutput", 
     "fields": {

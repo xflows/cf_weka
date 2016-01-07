@@ -23,7 +23,26 @@
       "order": 1, 
       "name": "Support Vector Machines Classifier (WEKA-SMO)"
     }
-  }, 
+  },
+
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "widget": "12355246-e5e8-495a-8b2e-f95cbb2c7a0d",
+      "name": "Parameters",
+      "short_name": "p",
+      "default": "-C 1",
+      "description": " -no-checks\n  Turns off all checks - use with caution!\n  Turning them off assumes that data is purely numeric, doesn't\n  contain any missing values, and has a nominal class. Turning them\n  off also means that no header information will be stored if the\n  machine is linear. Finally, it also assumes that no instance has\n  a weight equal to 0.\n  (default: checks on)\n -C <double>\n  The complexity constant C. (default 1)\n -N\n  Whether to 0=normalize/1=standardize/2=neither. (default 0=normalize)\n -L <double>\n  The tolerance parameter. (default 1.0e-3)\n -P <double>\n  The epsilon for round-off error. (default 1.0e-12)\n -M\n  Fit logistic models to SVM outputs. \n -V <double>\n  The number of folds for the internal\n  cross-validation. (default -1, use training data)\n -W <double>\n  The random number seed. (default 1)\n -K <classname and parameters>\n  The Kernel to use.\n  (default: weka.classifiers.functions.supportVector.PolyKernel)\n \n Options specific to kernel weka.classifiers.functions.supportVector.PolyKernel:\n \n -D\n  Enables debugging output (if available) to be printed.\n  (default: off)\n -no-checks\n  Turns off all checks - use with caution!\n  (default: checks on)\n -C <num>\n  The size of the cache (a prime number), 0 for full cache and \n  -1 to turn it off.\n  (default: 250007)\n -E <num>\n  The Exponent to use.\n  (default: 1.0)\n -L\n  Use lower-order terms.\n  (default: no)\n",
+      "required": false,
+      "multi": false,
+      "parameter_type": "text",
+      "variable": "params",
+      "parameter": true,
+      "order": 1,
+      "uid": "113433b1-6bb6-554d-b428-01f03df41353"
+    }
+  },
+
   {
     "model": "workflows.abstractoutput", 
     "fields": {

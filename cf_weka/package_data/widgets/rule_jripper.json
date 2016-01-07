@@ -23,7 +23,26 @@
       "order": 1, 
       "name": "Rule Learner JRipper (WEKA)"
     }
-  }, 
+  },
+
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "widget": "123aaa46-e5e8-495a-8b2e-f95cbb2c7a0d",
+      "name": "Parameters",
+      "short_name": "p",
+      "default": "-N 2.0",
+      "description": " -F <number of folds>\n  Set number of folds for REP\n  One fold is used as pruning set.\n  (default 3)\n -N <min. weights>\n  Set the minimal weights of instances\n  within a split.\n  (default 2.0)\n -O <number of runs>\n  Set the number of runs of\n  optimizations. (Default: 2)\n -D\n  Set whether turn on the\n  debug mode (Default: false)\n -S <seed>\n  The seed of randomization\n  (Default: 1)\n -E\n  Whether NOT check the error rate>=0.5\n  in stopping criteria  (default: check)\n -P\n  Whether NOT use pruning\n  (default: use pruning)",
+      "required": false,
+      "multi": false,
+      "parameter_type": "text",
+      "variable": "params",
+      "parameter": true,
+      "order": 1,
+      "uid": "113452b1-6bb6-404d-a2b8-01f03df41353"
+    }
+  },
+
   {
     "model": "workflows.abstractoutput", 
     "fields": {
@@ -33,7 +52,7 @@
       "description": "", 
       "variable": "learner", 
       "order": 1, 
-      "uid": "07a35138-1808-4228-8175-36f380f290fe"
+      "uid": "07a35138-1808-4228-8175-36f380f29041"
     }
   }
 ]

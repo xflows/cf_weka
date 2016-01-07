@@ -23,7 +23,26 @@
       "order": 1, 
       "name": "Logistic Regression (WEKA)"
     }
-  }, 
+  },
+
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "widget": "5918f36d-6b82-4a4d-8b6d-e21fef53059d",
+      "name": "Parameters",
+      "short_name": "p",
+      "default": "-M -1",
+      "description": "-R <ridge>\n  Set the ridge in the log-likelihood.\n \n -M <number>\n  Set the maximum number of iterations (default -1, until convergence).\n  ",
+      "required": false,
+      "multi": false,
+      "parameter_type": "text",
+      "variable": "params",
+      "parameter": true,
+      "order": 1,
+      "uid": "113452b1-6336-404d-bdb8-01f03df414a4"
+    }
+  },
+
   {
     "model": "workflows.abstractoutput", 
     "fields": {

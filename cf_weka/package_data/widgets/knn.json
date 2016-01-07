@@ -23,7 +23,25 @@
       "order": 1, 
       "name": "K-Nearest Neighbours Classifier (WEKA-IBk)"
     }
-  }, 
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "widget": "500a5a46-e5e8-495a-8b2e-f95cbb2c7a0d",
+      "name": "Parameters",
+      "short_name": "p",
+      "default": "-K 1",
+      "description": "-I\n  Weight neighbours by the inverse of their distance\n  (use when k > 1)\n -F\n  Weight neighbours by 1 - their distance\n  (use when k > 1)\n -K <number of neighbors>\n  Number of nearest neighbours (k) used in classification.\n  (Default = 1)\n -E\n  Minimise mean squared error rather than mean absolute\n  error when using -X option with numeric prediction.\n -W <window size>\n  Maximum number of training instances maintained.\n  Training instances are dropped FIFO. (Default = no window)\n -X\n  Select the number of nearest neighbours between 1\n  and the k value specified using hold-one-out evaluation\n  on the training data (use when k > 1)\n -A\n  The nearest neighbour search algorithm to use (default: weka.core.neighboursearch.LinearNNSearch).\n",
+      "required": false,
+      "multi": false,
+      "parameter_type": "text",
+      "variable": "params",
+      "parameter": true,
+      "order": 1,
+      "uid": "083452b1-6016-404d-bdb8-01f03df414a4"
+    }
+  },
+
   {
     "model": "workflows.abstractoutput", 
     "fields": {

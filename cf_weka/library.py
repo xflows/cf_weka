@@ -13,56 +13,68 @@ import preprocessing
 
 def decision_tree_j48(input_dict):
     """Decision Tree learner J48"""
-    return {'learner': classification.j48('-C 0.25 -M 2')}  # -C 0.25 -M 2
+    p = input_dict['params']
+    return {'learner': classification.j48(p)}  # '-C 0.25 -M 2'
 
 
 def naive_bayes(input_dict):
     """Naive Bayes learner"""
-    return {'learner': classification.naive_bayes()}
+    p = input_dict['params']
+    return {'learner': classification.naive_bayes(p)}
 
 
 def random_forest(input_dict):
     """Random Forest learner"""
-    return {'learner': classification.random_forest()}
+    p = input_dict['params']
+    return {'learner': classification.random_forest(p)}
 
 
 def multilayer_perceptron(input_dict):
     """MLP Neural-network learner"""
-    return {'learner': classification.multilayer_perceptron()}
+    p = input_dict['params']
+    return {'learner': classification.multilayer_perceptron(p)}
 
 
 def smo(input_dict):
     """SVM learner"""
-    return {'learner': classification.smo()}
+    p = input_dict['params']
+    return {'learner': classification.smo(p)}
 
 
 def logistic_regression(input_dict):
     """Logistic Regression learner"""
-    return {'learner': classification.logistic()}
+    p = input_dict['params']
+    return {'learner': classification.logistic(p)}
 
 
 def rules_zeror(input_dict):
     """rulesZeroR Rule learner"""
-    return {'learner': classification.rules_zeror()}
+    p = input_dict['params']
+    return {'learner': classification.rules_zeror(p)}
 
 
 def rules_jripper(input_dict):
     """Rule learner JRipper"""
-    return {'learner': classification.rules_jrip()}
+    p = input_dict['params']
+    return {'learner': classification.rules_jrip(p)}
 
 
 def knn(input_dict):
     """K-Nearest-Neighbours learner IBk"""
-    return {'learner': classification.ibk()}
+    p = input_dict['params']
+    return {'learner': classification.ibk(p)}
 
 
 def random_tree(input_dict):
     """Random Tree learner"""
-    return {'learner': classification.random_tree()}
+    p = input_dict['params']
+    return {'learner': classification.random_tree(p)}
 
 
 def rep_tree(input_dict):
-    return {'learner': classification.rep_tree()}
+    """Reduced Error Pruning tree"""
+    p = input_dict['params']
+    return {'learner': classification.rep_tree(p)}
 
 
 #
