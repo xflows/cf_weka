@@ -1,0 +1,57 @@
+[
+  {
+    "model": "workflows.abstractwidget", 
+    "fields": {
+      "category": "3c5ac714-84ca-4c93-befb-ce0c16148iii",
+      "treeview_image": "", 
+      "uid": "343a5a46-e5e8-495a-8b2e-f923bb11190a",
+      "windows_queue": false, 
+
+      "interaction_view": "", 
+      "has_progress_bar": false, 
+      "image": "", 
+      "description": "K* is an instance-based classifier, that is the class of a test instance is based upon the class of those training instances similar to it, as determined by some similarity function. It differs from other instance-based learners in that it uses an entropy-based distance function.",
+      "static_image": "WEKA_KStar.png",
+      "action": "k_star",
+      "visualization_view": "", 
+      "streaming_visualization_view": "", 
+      "post_interact_action": "", 
+      "wsdl_method": "", 
+      "wsdl": "", 
+      "interactive": false, 
+      "is_streaming": false, 
+      "order": 1, 
+      "name": "K* (WEKA-KStar)"
+    }
+  },
+  {
+    "model": "workflows.abstractinput",
+    "fields": {
+      "widget": "343a5a46-e5e8-495a-8b2e-f923bb11190a",
+      "name": "Parameters",
+      "short_name": "p",
+      "default": "",
+      "description": " -B <num>\n  Manual blend setting (default 20%)\n \n -E\n  Enable entropic auto-blend setting (symbolic class only)\n \n -M <char>\n  Specify the missing value treatment mode (default a)\n  Valid options are: a(verage), d(elete), m(axdiff), n(ormal)\n  ",
+      "required": false,
+      "multi": false,
+      "parameter_type": "text",
+      "variable": "params",
+      "parameter": true,
+      "order": 1,
+      "uid": "aa3452b1-6016-404d-bdb8-01f03df41456"
+    }
+  },
+
+  {
+    "model": "workflows.abstractoutput", 
+    "fields": {
+      "widget": "343a5a46-e5e8-495a-8b2e-f923bb11190a",
+      "name": "learner", 
+      "short_name": "lrn", 
+      "description": "", 
+      "variable": "learner", 
+      "order": 1, 
+      "uid": "bba37778-1808-4228-8175-36f380f29076"
+    }
+  }
+]

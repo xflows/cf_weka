@@ -76,6 +76,10 @@ def rep_tree(input_dict):
     p = input_dict['params']
     return {'learner': classification.rep_tree(p)}
 
+def k_star(input_dict):
+    """K* is an instance-based classifier, that is the class of a test instance is based upon the class of those training instances similar to it, as determined by some similarity function"""
+    p = input_dict['params']
+    return {'learner': classification.k_star(p)}
 
 #
 # PREPROCESSING
