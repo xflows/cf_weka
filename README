@@ -1,2 +1,1 @@
-The ClowdFlows WEKA_local Package.
-Contains data mining widgets based on WEKA. The package is intended to be used along with ClowdFlows 2.0.
+A ClowdFlows package which contains data mining widgets based on WEKA. The package is intended to be used along with ClowdFlows 2.0.
