@@ -59,7 +59,7 @@ class WekaClassifier(Classifier):
         data["targetPredicted"] = predictions
         return data
 
-    def printClassifier(self):
+    def print_classifier(self):
         if not jp.isThreadAttachedToJVM():
             jp.attachThreadToJVM()
 
