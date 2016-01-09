@@ -122,7 +122,16 @@ def apply_mapped_classifier_get_instances(input_dict):
 #
 def export_dataset_to_arff(input_dict):
     """Export Dataset to an ARFF Textual Format"""
-    return {}
+
+    arff_file_contents = utilities.export_dataset_to_arff(input_dict['dataset'])
+
+    file_out = open('myfile', 'w')
+    file_out.write(arff_file_contents)
+    file_out.close()
+
+    output_dict = {}
+    output_dict['file_out'] = file_out
+    return output_dict
 
 
 def import_dataset_from_arff(input_dict):

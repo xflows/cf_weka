@@ -36,10 +36,10 @@ def import_dataset_from_arff(arff, class_index=None):
 
 
 def export_dataset_to_arff(bunch):
-    '''Exports a dataset to an ARFF file
+    '''Exports a dataset to an ARFF format
 
     :param bunch: dataset
-    :return:
+    :return: contents of ARFF file
     '''
     if not jp.isThreadAttachedToJVM():
         jp.attachThreadToJVM()
@@ -50,13 +50,8 @@ def export_dataset_to_arff(bunch):
 
     # numpy.savetxt("foo.csv", csv, fmt='%.6f', delimiter=",")
 
-    fileOut = open('myfile', 'w')
-    fileOut.write(file_contents)
-    fileOut.close()
+    return file_contents
 
-    output_dict = {}
-    output_dict['FileOut'] = fileOut
-    return output_dict
 
 
 def print_weka_model(weka_classifier):

@@ -35,10 +35,24 @@
       "required": false, 
       "multi": false, 
       "parameter_type": null, 
-      "variable": "instances", 
+      "variable": "dataset",
       "parameter": false, 
       "order": 1, 
       "uid": "a39e5c9d-03a6-494c-b53a-f13d8277f643"
     }
+  },
+  {
+    "model": "workflows.abstractoutput",
+    "fields": {
+      "widget": "924b57f0-9ba2-4d87-90b8-c837da67f5c2",
+      "name": "learner",
+      "short_name": "lrn",
+      "description": "",
+      "variable": "learner",
+      "order": 1,
+      "uid": "bba37778-1808-4228-8175-36f380f29076"
+    }
   }
+
+
 ]
