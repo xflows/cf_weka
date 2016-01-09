@@ -29,7 +29,7 @@
       "widget": "4e8683ae-c571-413c-a592-2093de96ea3b",
       "name": "Dataset",
       "short_name": "ds",
-      "default": "cpu.arff",
+      "default": "iris.arff",
       "description": "",
       "required": false,
       "multi": false,
@@ -45,7 +45,7 @@
     "fields": {
       "widget": "4e8683ae-c571-413c-a592-2093de96ea3b",
       "name": "Dataset",
-      "short_name": "dat",
+      "short_name": "dts",
       "description": "",
       "variable": "data",
       "order": 1,
