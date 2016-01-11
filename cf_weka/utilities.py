@@ -105,6 +105,8 @@ def convert_weka_instances_to_bunch(instances):
     :param instances: WEKA dataset (Instances)
     :return:
     '''
+    if not jp.isThreadAttachedToJVM():
+        jp.attachThreadToJVM()
 
     if instances.classIndex() < 0:
         instances.setClassIndex(instances.numAttributes() - 1)
