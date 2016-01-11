@@ -41,7 +41,7 @@ def smo(input_dict):
     return {'learner': classification.smo(p)}
 
 
-def logistic_regression(input_dict):
+def logistic_regression_weka(input_dict):
     """Logistic Regression learner"""
     p = input_dict['params']
     return {'learner': classification.logistic(p)}

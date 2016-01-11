@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Logistic Regression learner",
       "static_image": "", 
-      "action": "logistic_regression",
+      "action": "logistic_regression_weka",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 
