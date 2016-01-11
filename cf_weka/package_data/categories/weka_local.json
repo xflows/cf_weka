@@ -1,9 +1,0 @@
-{
-  "model": "workflows.category", 
-  "fields": {
-    "name": "Weka_Local", 
-    "parent": null, 
-    "order": 1, 
-    "uid": "f4d466b2-29b8-4966-8f33-aff8bf0e522e"
-  }
-}

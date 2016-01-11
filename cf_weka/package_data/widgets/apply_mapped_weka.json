@@ -2,14 +2,14 @@
   {
     "model": "workflows.abstractwidget", 
     "fields": {
-      "category": "1888aa38-270f-423b-8d5f-e08f23c1a3b9",
+      "category": "5888aa38-270f-423b-8d5f-e08f23c1a3b9",
       "treeview_image": "", 
       "uid": "a5eb6ec2-9d01-4768-8420-74e2527625de", 
       "windows_queue": false,
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "", 
-      "description": "An advanced version of the Apply Classifier method.\nAddresses incompatible training and test data, and returns a dataset with predictions.\n      Has the ability to calculate model predictions for a dataset with the same structure or a slightly modified structure. In particular, model attributes that are not found in the incoming instances receive missing values, so do incoming nominal attribute values that the classifier has not seen before.",
+      "description": "An advanced version of the Apply Classifier method for WEKA classifiers/models.\nAddresses incompatible training and test data, and returns a dataset with predictions.\n      Has the ability to calculate model predictions for a dataset with the same structure or a slightly modified structure. In particular, model attributes that are not found in the incoming instances receive missing values, so do incoming nominal attribute values that the classifier has not seen before.",
       "static_image": "WEKA_ApplyClassifier.png",
       "action": "apply_mapped_classifier_get_instances",
       "visualization_view": "", 
