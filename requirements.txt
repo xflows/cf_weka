@@ -1,5 +1,6 @@
 cf_core
 cf_data_mining
-jpype
+JPype1
+scipy
 numpy
 scikit-learn==0.15.2
